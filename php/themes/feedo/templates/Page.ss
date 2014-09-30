@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Simple. by Sara (saratusar.com, @saratusar) for Innovatif - an awesome Slovenia-based digital agency (innovatif.com/en)
+Change it, enhance it and most importantly enjoy it!
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+-->
+
+<!--[if !IE]><!-->
+<html lang="$ContentLocale">
+<!--<![endif]-->
+<!--[if IE 6 ]><html lang="$ContentLocale" class="ie ie6"><![endif]-->
+<!--[if IE 7 ]><html lang="$ContentLocale" class="ie ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="$ContentLocale" class="ie ie8"><![endif]-->
+<head>
+	<% base_tag %>
+	<title>$SiteConfig.Title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	$MetaTags(false)
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<% require themedCSS('bootstrap') %>
+	<% require themedCSS('main') %>
+	<% require themedCSS('font-awesome.min') %>
+	<% require themedCSS('layout') %>
+	<link rel="shortcut icon" href="{$ThemeDir}/images/favicon.ico" />
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="$ThemeDir/js/html5shiv.js"></script>
+      <script src="$ThemeDir/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 site">
+				
+				
+						<div class="site-title">
+							<h2><b>Feedo</b> - Aggregator Theme</h2>
+						</div><! --/site top -->
+						
+						$Layout
+							
+						<div class="site-footer">
+							<p><a href="#">Home</a> | <a href="#">Contact</a> | <a href="#">Submit</a>  </p>
+						</div>
+					
+				</div><!-- /col-md-6 -->
+			</div><! --/row -->
+		</div><! --/container -->
+		        
+
+        
+<!-- ****************************************************************************************************************************************
+FOOTER
+********************************************************************************************************************************************* -->        
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <!--BACKSTRETCH-->
+    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+
+<%-- Please move: Theme javascript (below) should be moved to mysite/code/page.php  --%>
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="$ThemeDir/js/bootstrap.min.js"></script>
+    <script src="$ThemeDir/js/jquery.backstretch.min.js"></script>
+	<script src="$ThemeDir/js/main.js"></script>
+
+</body>
+</html>
