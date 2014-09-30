@@ -43,13 +43,13 @@ Change it, enhance it and most importantly enjoy it!
 				
 				
 						<div class="site-title">
-							<h2><b>Feedo</b> - Aggregator Theme</h2>
+							<h2>Challenge Board</h2>
 						</div><! --/site top -->
 						
 						$Layout
 							
 						<div class="site-footer">
-							<p><a href="#">Home</a> | <a href="#">Contact</a> | <a href="#">Submit</a>  </p>
+							<p><a href="#">Home</a> | <a href="#">New Challenge</a> | <a href="#">All Challenges</a>  </p>
 						</div>
 					
 				</div><!-- /col-md-6 -->
