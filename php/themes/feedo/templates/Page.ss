@@ -23,9 +23,8 @@ Change it, enhance it and most importantly enjoy it!
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<% require themedCSS('bootstrap') %>
-	<% require themedCSS('main') %>
+	<% require themedCSS('style') %>
 	<% require themedCSS('font-awesome.min') %>
-	<% require themedCSS('layout') %>
 	<link rel="shortcut icon" href="{$ThemeDir}/images/favicon.ico" />
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
