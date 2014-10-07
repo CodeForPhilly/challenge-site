@@ -81,7 +81,12 @@ FOOTER
     <%-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> --%>
     <script src="$ThemeDir/js/bootstrap.min.js"></script>
     <script src="$ThemeDir/js/jquery.backstretch.min.js"></script>
-	<script src="$ThemeDir/js/main.js"></script>
+    <script src="$ThemeDir/js/ripples.min.js"></script>
+    <script src="$ThemeDir/js/material.min.js"></script>
+    <script src="//fezvrasta.github.io/snackbarjs/dist/snackbar.min.js"></script>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/noUiSlider/6.2.0/jquery.nouislider.min.js"></script>
+    <script src="$ThemeDir/js/main.js"></script>
 
 </body>
 </html>
