@@ -24,6 +24,10 @@ Change it, enhance it and most importantly enjoy it!
 	<![endif]-->
 	<% require themedCSS('bootstrap') %>
 	<% require themedCSS('style') %>
+	<% require themedCSS('ripples.min.css') %>
+	<% require themedCSS('material-wfont.min.css') %>
+	<link href="//fezvrasta.github.io/snackbarjs/dist/snackbar.min.css" rel="stylesheet">
+
 	<% require themedCSS('font-awesome.min') %>
 	<link rel="shortcut icon" href="{$ThemeDir}/images/favicon.ico" />
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
@@ -34,6 +38,8 @@ Change it, enhance it and most importantly enjoy it!
       <script src="$ThemeDir/js/html5shiv.js"></script>
       <script src="$ThemeDir/js/respond.min.js"></script>
     <![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+  	<script src="http://cdn.embed.ly/jquery.embedly-3.1.1.min.js" type="text/javascript"></script>
 </head>
 <body>
 	
@@ -72,7 +78,7 @@ FOOTER
 <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <%-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> --%>
     <script src="$ThemeDir/js/bootstrap.min.js"></script>
     <script src="$ThemeDir/js/jquery.backstretch.min.js"></script>
 	<script src="$ThemeDir/js/main.js"></script>
