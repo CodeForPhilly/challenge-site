@@ -49,7 +49,7 @@ Change it, enhance it and most importantly enjoy it!
 				
 				
 						<div class="site-title">
-							<h2>Challenge Board</h2>
+							<h2>$Title</h2>
 						</div><! --/site top -->
 						
 						$Layout

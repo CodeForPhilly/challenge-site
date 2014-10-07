@@ -40,11 +40,11 @@ class Page_Controller extends ContentController {
 	);
 
 	public function test(){
-		$f = Folder::get()->filter(array('Title'=>'backgrounds'))->First();
-		$i = Injector::inst()->get('Image');
-		$i->inject($f->myChildren()->sort('RAND()')->First());
-		var_dump($i);exit;
-		return $f->myChildren()->sort('RAND()')->First()->Link();
+		// $f = Folder::get()->filter(array('Title'=>'backgrounds'))->First();
+		// $i = Injector::inst()->get('Image');
+		// $i->inject($f->myChildren()->sort('RAND()')->First());
+		// var_dump($i);exit;
+		// return $f->myChildren()->sort('RAND()')->First()->Link();
 	}
 	public function backgroundimage(){
 		return SiteConfig::get()->First()->BackgroundImages()->sort('RAND()')->First()->Image();
@@ -62,6 +62,11 @@ class Page_Controller extends ContentController {
 		// Note: you should use SS template require tags inside your templates 
 		// instead of putting Requirements calls here.  However these are 
 		// included so that our older themes still work
+	}
+
+	public function index($arguments){
+		$params = $arguments->params();
+		var_dump($params);
 	}
 
 }
