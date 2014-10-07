@@ -66,6 +66,10 @@ class Page_Controller extends ContentController {
 
 	public function index($arguments){
 		$params = $arguments->params();
+		if($param('ID' != NULL)){
+			//check for page
+			return $this->renderWith(array('Challenge','Page'));
+		}
 		var_dump($params);
 	}
 
