@@ -20,3 +20,4 @@ define('SS_DEFAULT_ADMIN_PASSWORD', 'sw0rdfish');
 
 global $_FILE_TO_URL_MAPPING;
 $_FILE_TO_URL_MAPPING[getenv('OPENSHIFT_REPO_DIR').'php'] = 'http://'.getenv('OPENSHIFT_APP_NAME').'-'.getenv('OPENSHIFT_NAMESPACE').'.'.getenv('OPENSHIFT_CLOUD_DOMAIN');
+$_FILE_TO_URL_MAPPING['/Users/toby/melle/us/phl/challenge/'.'php'] = 'http://challenge-phl.us.melle.io';
