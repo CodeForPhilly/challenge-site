@@ -30,10 +30,10 @@ app.factory('appUtils', function ($q, $http, $timeout){
 	}
 })
 // this factory returns a synchronized array of chat messages
-app.factory("challengeProjects", ["$firebase", '$rootScope', 
+app.factory("projectList", ["$firebase", '$rootScope', 
   function($firebase, $rootScope) {
      // create a reference to the Firebase where we will store our data
-     var ref = new Firebase($rootScope.demoUrl);
+     var ref = new Firebase($rootScope.demoUrl)+'/projects';
       
      // this uses AngularFire to create the synchronized array
      return $firebase(ref).$asArray();
@@ -85,8 +85,15 @@ app.controller("ChatCtrl", ["$scope", "chatMessages",
   }
 ]);
 
+app.controller("ProjectsCtrl", ["$scope", "projectList",
+	function($scope, projectList){
+		$scope.projects = projectList;
+	}
+]);
+
 app.run(function($rootScope) {
-   $rootScope.demoUrl = 'https://challengepost.firebaseio.com';
+	$rootScope.challengeId = $('#pageTitle').data('id');;
+   $rootScope.demoUrl = 'https://challengepost.firebaseio.com/'+;
 });
 
 
