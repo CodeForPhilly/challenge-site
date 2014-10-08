@@ -98,7 +98,7 @@ a:after {
 /* CONFIGURATION FOR Feedo */
 
 .site {
-	background: white;
+	background: rgb(240, 240, 240);
 margin-top: 20px;
 margin-bottom: 20px;
 box-shadow: 3px 3px 6px #BDBDBD;
