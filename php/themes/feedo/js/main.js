@@ -92,8 +92,10 @@ app.controller("ProjectsCtrl", ["$scope", "projectList",
 ]);
 
 app.run(function($rootScope) {
-	$rootScope.challengeId = $('#pageTitle').data('id');
-	$rootScope.demoUrl = 'https://challengepost.firebaseio.com/challenges/'+$rootScope.challengeId;
+	$(document).ready(function(){
+		$rootScope.challengeId = $('#pageTitle').data('id');
+		$rootScope.demoUrl = 'https://challengepost.firebaseio.com/challenges/'+$rootScope.challengeId;
+	});
 });
 
 
