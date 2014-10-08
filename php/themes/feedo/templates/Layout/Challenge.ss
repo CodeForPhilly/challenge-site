@@ -19,8 +19,8 @@
 		    <div ng-repeat="project in projects" class="list-group-item">
 		        <div class="row-content">
 		            <div class="action-secondary"><i class="icon-material-info"></i></div>
-		            <h4 class="list-group-item-heading">\$title</h4>
-		            <p class="list-group-item-text">\$snippet</p>
+		            <h4 class="list-group-item-heading">\$project.title</h4>
+		            <p class="list-group-item-text">\$project.snippet</p>
 		        </div>
 		        <div class="list-group-separator"></div>
 		    </div>
