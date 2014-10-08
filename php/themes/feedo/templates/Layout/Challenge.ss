@@ -28,6 +28,8 @@
 		        
 		        <div class="row-content">
 		            <div class="action-secondary"><i class="icon-material-info"></i></div>
+		            <div class="action-secondary"><i class="icon-material-polymer"></i></div>
+		            <div class="action-secondary"><i class="icon-material-message"></i></div>
 		            <h4 class="list-group-item-heading">Tile with an icon</h4>
 		            <p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
 		        </div>
