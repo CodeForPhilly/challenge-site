@@ -38,11 +38,7 @@ Change it, enhance it and most importantly enjoy it!
       <script src="$ThemeDir/js/html5shiv.js"></script>
       <script src="$ThemeDir/js/respond.min.js"></script>
     <![endif]-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js"></script>
-  	<script src="https://cdn.embed.ly/jquery.embedly-3.1.1.min.js" type="text/javascript"></script>
-  	<script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
-	<script src="https://cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min.js"></script>
+    
 </head>
 <body itemscope itemtype="http://schema.org/Blog">
 	
@@ -82,6 +78,11 @@ FOOTER
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <%-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> --%>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js"></script>
+  	<script src="https://cdn.embed.ly/jquery.embedly-3.1.1.min.js" type="text/javascript"></script>
+  	<script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min.js"></script>
     <script src="$ThemeDir/js/bootstrap.min.js"></script>
     <script src="$ThemeDir/js/jquery.backstretch.min.js"></script>
     <script src="$ThemeDir/js/ripples.min.js"></script>
