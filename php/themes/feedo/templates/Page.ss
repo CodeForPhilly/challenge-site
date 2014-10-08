@@ -42,7 +42,7 @@ Change it, enhance it and most importantly enjoy it!
 <body itemscope itemtype="http://schema.org/Blog">
 	
 		<div class="container">
-			<div class="row" ng-app="challengeApp" ng-controller="ChatCtrl">
+			<div class="row">
 				<div class="col-md-6 col-md-offset-3 site">
 				
 				
