@@ -1,24 +1,20 @@
 <?php
-class Page extends SiteTree {
+class Page extends DataObject {
 
 	private static $db = array(
-		'IconClass' => 'Varchar'
 	);
 
 	private static $has_one = array(
-		'SectionBackgroundImage' => 'Image'
 	);
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
-		$fields->addFieldToTab('Root.Main', new UploadField('SectionBackgroundImage','Section Background Image'),'MenuTitle');
-		$fields->addFieldToTab('Root.Main', new TextField('IconClass','Icon Class'));
 		
 		return $fields;
 	}
 
 }
-class Page_Controller extends ContentController {
+class Page_Controller extends Controller {
 
 	/**
 	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
@@ -36,9 +32,10 @@ class Page_Controller extends ContentController {
 	 * @var array
 	 */
 	private static $allowed_actions = array (
-		'test'
+		'test','index'
 	);
-
+	 private static $url_handlers = array(
+    );
 	public function test(){
 		// $f = Folder::get()->filter(array('Title'=>'backgrounds'))->First();
 		// $i = Injector::inst()->get('Image');
@@ -64,10 +61,21 @@ class Page_Controller extends ContentController {
 		// included so that our older themes still work
 	}
 
+	public  function challenges($arguments){
+		$params = $arguments->params();
+		if($arguments->param('Action') != NULL){
+			//check for page
+			$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
+			return $this->renderWith(array('Challenge','Page'));
+		}
+		var_dump($params);
+	}
+
 	public function index($arguments){
 		$params = $arguments->params();
 		if($arguments->param('ID') != NULL){
 			//check for page
+			$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
 			return $this->renderWith(array('Challenge','Page'));
 		}
 		var_dump($params);

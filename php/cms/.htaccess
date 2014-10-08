@@ -1,6 +1,0 @@
-<FilesMatch "\.(php|php3|php4|php5|phtml|inc)$">
-	Require all denied
-</FilesMatch>
-<FilesMatch "silverstripe_version$">
-	Require all denied
-</FilesMatch>

@@ -4,4 +4,6 @@ After: framework/routes#coreroutes
 ---
 Director:
   rules:
-    'beta' : 'Page_Controller'
+    '' : 'Page_Controller'
+    'index' : 'Page_Controller'
+    'c/$ID!' : 'Page_Controller'
