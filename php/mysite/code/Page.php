@@ -64,7 +64,7 @@ class Page_Controller extends Controller {
 	public  function challenges($arguments){
 		$params = $arguments->params();
 		if($arguments->param('Action') != NULL){
-			//check for page
+			//check firebase for challenge
 			$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
 			return $this->renderWith(array('Challenge','Page'));
 		}
@@ -78,7 +78,7 @@ class Page_Controller extends Controller {
 			$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
 			return $this->renderWith(array('Challenge','Page'));
 		}
-		var_dump($params);
+		return $this->renderWith(array('Home','Page'));
 	}
 
 }
