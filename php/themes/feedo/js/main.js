@@ -85,7 +85,7 @@ app.controller("ChatCtrl", ["$scope", "chatMessages",
   }
 ]);
 
-app.run(function($rootScope, demoUtils) {
+app.run(function($rootScope) {
    $rootScope.demoUrl = 'https://challengepost.firebaseio.com';
 });
 
