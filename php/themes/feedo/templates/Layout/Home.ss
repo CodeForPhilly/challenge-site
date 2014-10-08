@@ -1,6 +1,6 @@
 <a href="https://github.com/FezVrasta/bootstrap-material-design/archive/master.zip" class="btn btn-sup btn-material-pink btn-raised">
     <i class=""></i>
-    <span>Create a Challenge</span>
+    <span><a data-toggle="modal" data-target="#createChallenge" href="javascript:void(0)"></a>Create a Challenge</span>
 </a>
 <h2>Recent Challenges</h2>
 <div class="panel panel-default">
@@ -10,7 +10,7 @@
     <div class="panel-footer">#101LineChallenge</div>
 </div>
 
-<div class="modal">
+<div class="modal" id="createChallenge">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
