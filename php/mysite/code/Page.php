@@ -74,9 +74,11 @@ class Page_Controller extends Controller {
 			}
 			//Check to see if challenge exists
 			$d = $fire->get('challenges/'.$id);
-			var_dump($d);
-			if($d){
+			// var_dump(json_decode($d));
+			if($d != 'null'){
+				$data = json_decode($d);
 				//Get Challenge Details
+				$this->Title = $data->title;
 				return $this->renderWith(array('Challenge','Page'));
 			}else{
 				// Challenge not found. Inform user
