@@ -83,7 +83,7 @@ FOOTER
   	<script src="https://cdn.embed.ly/jquery.embedly-3.1.1.min.js" type="text/javascript"></script>
   	<script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
 	<script src="https://cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min.js"></script>
-    <script src="$ThemeDir/js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="$ThemeDir/js/jquery.backstretch.min.js"></script>
     <script src="$ThemeDir/js/ripples.min.js"></script>
     <script src="$ThemeDir/js/material.min.js"></script>
