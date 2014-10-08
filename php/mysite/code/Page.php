@@ -14,6 +14,55 @@ class Page extends DataObject {
 	}
 
 }
+
+class Project_Controller extends Controller{
+
+	private static $allowed_actions = array (
+		'challenges','projects'
+	);
+	 private static $url_handlers = array(
+    );
+
+	public function init() {
+		parent::init();
+	}
+
+	public function normalize($foo){
+		$foo = preg_replace('/\s+/', ' ', $foo);
+		$foo = strtolower(trim($foo));
+		return str_replace(' ','-',$foo);
+	}
+
+	public  function projects($arguments){
+		$params = $arguments->params();
+		$vars = $arguments->requestVars();
+		if(!array_key_exists('title', $vars)){
+			print_r('Missing project title!'.PHP_EOL);exit;
+		}else{
+			$title = $vars['title'];
+		}
+		var_dump($params);
+		if($arguments->param('ID') != NULL){
+			$action = $arguments->param('ID');
+			$c = $arguments->param('OtherID');
+			$path = $this->normalize($title);
+			$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
+			if($action == 'add'){
+				//Add a project
+				$d = $fire->get('challenges/'.$c.'/id');
+				if($d == 'null'){
+					print_r('Missing project id!'.PHP_EOL);
+				}else{
+					// Set project info
+					$fire->set('challenges/'.$c.'/projects/'.$path.'/title',$title);
+					print_r('New Project added to '.$action.' :'.$title.PHP_EOL);
+					//return $this->render();
+				}
+
+			}
+		}
+	}
+}
 class Page_Controller extends Controller {
 
 	/**
