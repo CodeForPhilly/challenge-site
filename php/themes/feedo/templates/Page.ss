@@ -7,7 +7,7 @@ Change it, enhance it and most importantly enjoy it!
 -->
 
 <!--[if !IE]><!-->
-<html ng-app="challengeApp" lang="$ContentLocale">
+<html lang="$ContentLocale">
 <!--<![endif]-->
 <!--[if IE 6 ]><html lang="$ContentLocale" class="ie ie6"><![endif]-->
 <!--[if IE 7 ]><html lang="$ContentLocale" class="ie ie7"><![endif]-->
@@ -42,7 +42,7 @@ Change it, enhance it and most importantly enjoy it!
 <body itemscope itemtype="http://schema.org/Blog">
 	
 		<div class="container">
-			<div class="row">
+			<div class="row" ng-app="challengeApp">
 				<div class="col-md-6 col-md-offset-3 site">
 				
 				
