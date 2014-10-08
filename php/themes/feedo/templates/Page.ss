@@ -25,7 +25,7 @@ Change it, enhance it and most importantly enjoy it!
 	<% require themedCSS('bootstrap') %>
 	<% require themedCSS('style') %>
 	<% require themedCSS('ripples.min') %>
-	<% require themedCSS('http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css') %>
+	<% require css('http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css') %>
 	<% require themedCSS('material-wfont.min') %>
 	<link href="//fezvrasta.github.io/snackbarjs/dist/snackbar.min.css" rel="stylesheet">
 	<link rel="shortcut icon" href="{$ThemeDir}/images/favicon.ico" />
