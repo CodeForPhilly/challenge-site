@@ -12,7 +12,42 @@
 </ul>
 <div id="myTabContent" class="tab-content">
     <div class="tab-pane fade active in" id="projects">
-        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+        <p>Below are a list of projects you available for you to contribute to. Feel free to <a href='#'>Add another project to the list</a></p>
+        <div class="list-group">
+		    <div class="list-group-item">
+		        <div class="row-action-primary">
+		            <i class="icon-material-folder"></i>
+		        </div>
+		        <div class="row-content">
+		            <div class="action-secondary"><i class="icon-material-info"></i></div>
+		            <h4 class="list-group-item-heading">Tile with an icon</h4>
+		            <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+		        </div>
+		    </div>
+		    <div class="list-group-separator"></div>
+		    <div class="list-group-item">
+		        <div class="row-action-primary">
+		            <i class="icon-material-folder"></i>
+		        </div>
+		        <div class="row-content">
+		            <div class="action-secondary"><i class="icon-material-info"></i></div>
+		            <h4 class="list-group-item-heading">Tile with an icon</h4>
+		            <p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
+		        </div>
+		    </div>
+		    <div class="list-group-separator"></div>
+		    <div class="list-group-item">
+		        <div class="row-action-primary">
+		            <i class="icon-material-folder"></i>
+		        </div>
+		        <div class="row-content">
+		            <div class="action-secondary"><i class="icon-material-info"></i></div>
+		            <h4 class="list-group-item-heading">Tile with an icon</h4>
+		            <p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
+		        </div>
+		    </div>
+		    <div class="list-group-separator"></div>
+		</div>
     </div>
     <div class="tab-pane fade" id="chat">
        <h2>Chat about this.</h2>
