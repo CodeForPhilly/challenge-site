@@ -1,5 +1,5 @@
 <div id="challengeContent" class="row">
-<button type="button" class="btn btn-default withripple hashtag" data-toggle="tooltip" data-placement="right" title="" data-original-title="Use this tag when sharing.">$Tag<div class="ripple-wrapper"></div></button>
+<button type="button" class="btn btn-default withripple hashtag" data-toggle="tooltip" data-placement="right" title="Use this tag when sharing.">$Tag<div class="ripple-wrapper"></div></button>
 <div class="well">
 	<div class="jumbotron">
 	<p>$Description</p>
