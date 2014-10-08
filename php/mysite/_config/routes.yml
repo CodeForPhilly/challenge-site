@@ -6,4 +6,4 @@ Director:
   rules:
     '' : 'Page_Controller'
     'index' : 'Page_Controller'
-    'c/$ID!' : 'Page_Controller'
+    'c/$ID' : 'Page_Controller'
