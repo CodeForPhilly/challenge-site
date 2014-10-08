@@ -87,7 +87,7 @@ app.factory("chatMessages", ["$firebase", '$rootScope',
 
 app.controller("ProjectsCtrl", ["$scope", "projectList",
 	function($scope, projectList){
-		projectList().$bindTo($scope, "projects");
+		$scope.projects = projectList;
 	}
 ]);
 
