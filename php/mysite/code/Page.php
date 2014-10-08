@@ -79,6 +79,8 @@ class Page_Controller extends Controller {
 				$data = json_decode($d);
 				//Get Challenge Details
 				$this->Title = $data->title;
+				$this->Tag = $data->tag;
+				$this->Description = $data->description;
 				return $this->renderWith(array('Challenge','Page'));
 			}else{
 				// Challenge not found. Inform user
