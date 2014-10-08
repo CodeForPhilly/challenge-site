@@ -17,8 +17,11 @@
         <p>Don't see the project you want? Feel free to <a data-toggle="modal" data-target="#addProject" href="javascript:void(0)"><i class="icon-material-add-box"></i> Add another project to the list</a></p>
         <div class="list-group">
 		    <div ng-repeat="project in projects" class="list-group-item">
+		    	<div class="row-action-primary">
+		            <i class="{{project.icon}}"></i>
+		        </div>
 		        <div class="row-content">
-		            <div class="action-secondary"><i class="icon-material-info"></i></div>
+		            <div class="action-secondary"><a href="{{project.link}}" target="_blank"><i class="icon-material-info"></i></a></div>
 		            <h4 class="list-group-item-heading">{{project.title}}</h4>
 		            <p class="list-group-item-text">\{{project.snippet}}</p>
 		        </div>
