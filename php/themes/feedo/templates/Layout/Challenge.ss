@@ -1,5 +1,7 @@
 <div id="challengeContent" class="row">
+
 	<h4 class="hashtag">#$Tag</h4>
+<div class="well">
 	<h3>Description</h3>
 	<p>$Description</p>
 	<h2>Comments</h2>
@@ -9,4 +11,5 @@
 	        <span>Comment</span>
 	    </a>
 	</div>
+</div>
 </div>
