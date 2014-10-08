@@ -104,8 +104,8 @@ class Page_Controller extends Controller {
 
 			//return $this->renderWith(array('Challenge','Page'));
 		}
-		var_dump($arguments->params());
-		//return $this->renderWith(array('Home','Page'));
+		// var_dump($arguments->params());
+		return $this->renderWith(array('Home','Page'));
 	}
 
 }
