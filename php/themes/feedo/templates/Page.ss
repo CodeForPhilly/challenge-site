@@ -25,6 +25,7 @@ Change it, enhance it and most importantly enjoy it!
 	<% require themedCSS('bootstrap') %>
 	<% require themedCSS('style') %>
 	<% require themedCSS('ripples.min') %>
+	<% require themedCSS('font-awesome.min') %>
 	<% require themedCSS('material-wfont.min') %>
 	<link href="//fezvrasta.github.io/snackbarjs/dist/snackbar.min.css" rel="stylesheet">
 	<link rel="shortcut icon" href="{$ThemeDir}/images/favicon.ico" />
@@ -52,7 +53,7 @@ Change it, enhance it and most importantly enjoy it!
 						$Layout
 							
 						<div class="site-footer">
-							<p><a href="#">Home</a> | <a href="#">New Challenge</a> | <a href="#">All Challenges</a>  </p>
+							<p><a href="#">Home</a> | <a href="#">Code for Philly</a> | <a href="#"><i class="fa fa-github"></i>Source</a>  </p>
 						</div>
 					
 				</div><!-- /col-md-6 -->
