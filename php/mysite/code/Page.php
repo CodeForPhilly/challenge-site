@@ -31,7 +31,7 @@ class Page_Controller extends Controller {
 	 *
 	 * @var array
 	 */
-	private static $allowed_actions = array (
+	/*private static $allowed_actions = array (
 		'test','index','challenges'
 	);
 	 private static $url_handlers = array(
@@ -75,7 +75,7 @@ class Page_Controller extends Controller {
 			//return $this->renderWith(array('Challenge','Page'));
 		}
 		var_dump($params);
-	}
+	}*/
 
 	public function index($arguments){
 		$params = $arguments->params();
