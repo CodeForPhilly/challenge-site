@@ -27,8 +27,6 @@ Change it, enhance it and most importantly enjoy it!
 	<% require themedCSS('ripples.min') %>
 	<% require themedCSS('material-wfont.min') %>
 	<link href="//fezvrasta.github.io/snackbarjs/dist/snackbar.min.css" rel="stylesheet">
-
-	<% require themedCSS('font-awesome.min') %>
 	<link rel="shortcut icon" href="{$ThemeDir}/images/favicon.ico" />
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>

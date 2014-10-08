@@ -12,7 +12,8 @@
 </ul>
 <div id="myTabContent" class="tab-content">
     <div class="tab-pane fade active in" id="projects">
-        <p>Below are a list of projects you available for you to contribute to. Feel free to <a href='#'>Add another project to the list</a></p>
+        <p>Below are a list of projects you available for you to contribute to.</p>
+        <p>Don't see the project you want? Feel free to <a href='#'>Add another project to the list</a></p>
         <div class="list-group">
 		    <div class="list-group-item">
 		        <div class="row-action-primary">
