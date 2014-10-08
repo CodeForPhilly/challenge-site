@@ -4,6 +4,6 @@ After: framework/routes#coreroutes
 ---
 Director:
   rules:
-    'c/$ID!' : 'Page_Controller'
+    'c' : 'Page_Controller'
     '' : 'Page_Controller'
     'api' : 'Project_Controller'

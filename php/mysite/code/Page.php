@@ -138,7 +138,7 @@ class Page_Controller extends Controller {
 			}
 			//return $this->renderWith(array('Challenge','Page'));
 		}
-		var_dump($params);
+		// var_dump($params);
 	}
 
 	public function index($arguments){
@@ -149,7 +149,7 @@ class Page_Controller extends Controller {
 			//check for page
 			$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
 			$d = $fire->get('challenges/'.$c.'/id');
-			var_dump($d);
+			// var_dump($d);
 
 			//return $this->renderWith(array('Challenge','Page'));
 		}
