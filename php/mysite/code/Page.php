@@ -84,8 +84,9 @@ class Page_Controller extends Controller {
 			$c = $arguments->param('ID');
 			//check for page
 			$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
-			$d = $fire->get('challenges/'.$c);
+			$d = $fire->get('challenges/'.$c.'/id');
 			var_dump($d);
+			var_dump($arguments->params());
 			//return $this->renderWith(array('Challenge','Page'));
 		}
 		//return $this->renderWith(array('Home','Page'));
