@@ -39,7 +39,6 @@ app.factory("projectList", ["$firebase", '$rootScope',
      // this uses AngularFire to create the synchronized array
      return $firebase(ref).$asArray();
  }
-  }
 ]);
 
 app.factory("challengeChatMessages", ["$firebase", '$rootScope', 
