@@ -53,7 +53,7 @@ Change it, enhance it and most importantly enjoy it!
 						$Layout
 							
 						<div class="site-footer">
-							<p><a href="#">Home</a> | <a href="#">Code for Philly</a> | <a href="//github.com/CodeforPhiladelphia/challenges"><i class="fa fa-github fa-lg"></i>&nbsp;</a></p>
+							<p><a href="/">Home</a> | <a href="http://www.codeforphilly.org">Code for Philly</a> | <a href="//github.com/CodeforPhiladelphia/challenges"><i class="fa fa-github fa-lg"></i>&nbsp;</a></p>
 						</div>
 					
 				</div><!-- /col-md-6 -->
