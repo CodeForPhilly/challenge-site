@@ -150,6 +150,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c539e', end
 
 .hashtag{
     color: #8F8F8F !important;
-    text-transform: lowercase !important;
+    text-transform: none !important;
     text-align: center !important;
 }
