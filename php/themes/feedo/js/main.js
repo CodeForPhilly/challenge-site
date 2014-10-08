@@ -61,7 +61,7 @@ app.factory("chatMessages", ["$firebase", '$rootScope',
   }
 ]);
 
-app.controller("ChatCtrl", ["$scope", "chatMessages",
+/*app.controller("ChatCtrl", ["$scope", "chatMessages",
   // we pass our new factory, chatMessages, into the controller
   function($scope, chatMessages) {
     $scope.user = "Guest " + Math.round(Math.random()*101);
@@ -84,7 +84,7 @@ app.controller("ChatCtrl", ["$scope", "chatMessages",
         }
     });
   }
-]);
+]);*/
 
 app.controller("ProjectsCtrl", ["$scope", "projectList",
 	function($scope, projectList){
