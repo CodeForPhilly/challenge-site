@@ -33,13 +33,10 @@ app.factory('appUtils', function ($q, $http, $timeout){
 app.factory("projectList", ["$firebase", '$rootScope', 
   function($firebase, $rootScope) {
      // create a reference to the Firebase where we will store our data
-    jQuery(document).ready(function(){
 		var ref = new Firebase('https://challengepost.firebaseio.com/challenges/101/projects');
 
 		// this uses AngularFire to create the synchronized array
 		return $firebase(ref).$asArray();
-
-	});
  }
 ]);
 
