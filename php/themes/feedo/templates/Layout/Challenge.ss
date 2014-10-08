@@ -1,9 +1,10 @@
 <div id="challengeContent" class="row">
 
-	<h4 class="hashtag">#$Tag</h4>
+	<h4 class="hashtag" data-toggle="tooltip" data-placement="right" data-original-title="Use this tag when sharing.">#$Tag</h4>
 <div class="well">
-	<h3>Description</h3>
+	<div class="jumbotron">
 	<p>$Description</p>
+</div>
 	<h2>Comments</h2>
 	<div class="post">
 		<p>Comment</p>
