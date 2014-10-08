@@ -45,6 +45,7 @@
 		    <div class="list-group-separator"></div>
 		</div>
     </div>
+
     <div class="tab-pane fade" id="chat">
        <h2>Chat about this.</h2>
 		<div class="post">
@@ -54,12 +55,19 @@
 		    </a>
 		</div>
     </div>
+
     <div class="tab-pane fade" id="response">
-        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
+        <div class="panel panel-info">
+		    <div class="panel-heading">
+		        <h3 class="panel-title">Responses to #$Tag</h3>
+		    </div>
+		    <div class="panel-body">
+		        There are currently no responses to this challenge. Be the first!
+		        <a href="javascript:void(0)" class="btn btn-success btn-xs">Submit a Response</a>
+		    </div>
+		</div>
     </div>
-    <div class="tab-pane fade" id="dropdown2">
-        <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
-    </div>
+
 </div>
 	
 </div>
