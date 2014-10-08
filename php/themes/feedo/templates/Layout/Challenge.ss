@@ -6,8 +6,9 @@
 	</div>
 	<ul class="nav nav-tabs" style="margin-bottom: 15px;">
     <li class="active"><a href="#projects" data-toggle="tab">Show Projects</a></li>
-    <li><a href="#chat" data-toggle="tab">Chat</a></li>
-    <li><a href="#response" data-toggle="tab">Submit Response</a></li>
+    <li><a href="#response" data-toggle="tab">View Responses</a></li>
+    <li><a href="#chat" data-toggle="tab">Chat about this</a></li>
+    
     
 </ul>
 <div id="myTabContent" class="tab-content">
@@ -28,8 +29,6 @@
 		        
 		        <div class="row-content">
 		            <div class="action-secondary"><i class="icon-material-info"></i></div>
-		            <div class="action-secondary"><i class="icon-material-polymer"></i></div>
-		            <div class="action-secondary"><i class="icon-material-message"></i></div>
 		            <h4 class="list-group-item-heading">Tile with an icon</h4>
 		            <p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
 		        </div>
