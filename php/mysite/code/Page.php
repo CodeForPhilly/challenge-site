@@ -35,7 +35,7 @@ class Page_Controller extends Controller {
 		'challenges'
 	);
 	 private static $url_handlers = array(
-	 	'$P!' => 'challenges'
+	 	'$ID!' => 'challenges'
     );
 	public function test(){
 		// $f = Folder::get()->filter(array('Title'=>'backgrounds'))->First();
@@ -70,9 +70,20 @@ class Page_Controller extends Controller {
 				$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
 				$fire->set('challenges/'.$c.'/id',$c);
 				print_r('New Challenge '.$c.' created!'.PHP_EOL);
+				return $this->render();
 			}
-			
 
+			//Check to see if challenge exists
+			$d = $fire->get('challenges/'.$id);
+			var_dump($d);
+			if($d){
+				//Get Challenge Details
+				return $this->renderWith(array('Challenge','Page'));
+			}else{
+				// Challenge not found. Inform user
+				$this->Content = 'Challenge Not Found!';
+				return $this->renderWith(array('Page','Page'));
+			}
 			//return $this->renderWith(array('Challenge','Page'));
 		}
 		var_dump($params);
