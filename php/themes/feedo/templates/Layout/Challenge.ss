@@ -11,38 +11,21 @@
     
     
 </ul>
-<div id="myTabContent" class="tab-content">
+<div ng-controller="ProjectsCtrl" id="myTabContent" class="tab-content">
     <div class="tab-pane fade active in" id="projects">
         <p>Below are a list of projects you available for you to contribute to.</p>
         <p>Don't see the project you want? Feel free to <a data-toggle="modal" data-target="#addProject" href="javascript:void(0)">Add another project to the list</a></p>
         <div class="list-group">
-		    <div class="list-group-item">
-		        
+		    <div ng-repeat="projects as project" class="list-group-item">
 		        <div class="row-content">
 		            <div class="action-secondary"><i class="icon-material-info"></i></div>
-		            <h4 class="list-group-item-heading">Tile with an icon</h4>
-		            <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+		            <h4 class="list-group-item-heading">\$title</h4>
+		            <p class="list-group-item-text">\$snippet</p>
 		        </div>
+		        <div class="list-group-separator"></div>
 		    </div>
-		    <div class="list-group-separator"></div>
-		    <div class="list-group-item">
-		        
-		        <div class="row-content">
-		            <div class="action-secondary"><i class="icon-material-info"></i></div>
-		            <h4 class="list-group-item-heading">Tile with an icon</h4>
-		            <p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
-		        </div>
-		    </div>
-		    <div class="list-group-separator"></div>
-		    <div class="list-group-item">
-		        
-		        <div class="row-content">
-		            <div class="action-secondary"><i class="icon-material-info"></i></div>
-		            <h4 class="list-group-item-heading">Tile with an icon</h4>
-		            <p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
-		        </div>
-		    </div>
-		    <div class="list-group-separator"></div>
+		    
+		    
 		</div>
     </div>
 
