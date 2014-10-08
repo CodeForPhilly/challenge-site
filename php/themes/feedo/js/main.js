@@ -34,16 +34,16 @@ app.factory("projectList", ["$firebase", '$rootScope',
   function($firebase, $rootScope) {
      // create a reference to the Firebase where we will store our data
     jQuery(document).ready(function(){
-		var ref = new Firebase($rootScope.demoUrl)+'/projects';
+		var ref = new Firebase('https://challengepost.firebaseio.com/challenges/101/projects');
 
 		// this uses AngularFire to create the synchronized array
-		return $firebase(ref);
+		return $firebase(ref).$asArray();
 
 	});
  }
 ]);
 
-app.factory("challengeChatMessages", ["$firebase", '$rootScope', 
+/*app.factory("challengeChatMessages", ["$firebase", '$rootScope', 
   function($firebase, $rootScope) {
      // create a reference to the Firebase where we will store our data
      var ref = new Firebase($rootScope.demoUrl);
@@ -61,7 +61,7 @@ app.factory("chatMessages", ["$firebase", '$rootScope',
      // this uses AngularFire to create the synchronized array
      return $firebase(ref).$asArray();
   }
-]);
+]);*/
 
 /*app.controller("ChatCtrl", ["$scope", "chatMessages",
   // we pass our new factory, chatMessages, into the controller
