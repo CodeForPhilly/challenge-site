@@ -3,11 +3,14 @@
     <span>Create a Challenge</span>
 </a>
 <h2>Recent Challenges</h2>
-<div class="panel panel-default">
-    <div class="panel-body">
+<div class="panel panel-success">
+    <div class="panel-heading">
         101 Line Challenge
     </div>
-    <div class="panel-footer">#101LineChallenge</div>
+    <div class="panel-body">
+    	<a href="c/101">#101LineChallenge</a><br>
+    	Posted by: Lloyd
+    </div>
 </div>
 
 <div class="modal" id="createChallenge">
@@ -15,14 +18,13 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title">Modal title</h4>
+                <h4 class="modal-title">New Challenge</h4>
             </div>
             <div class="modal-body">
-                <p>One fine body…</p>
+                <p>Hold up! This feature will be available soon!</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>
