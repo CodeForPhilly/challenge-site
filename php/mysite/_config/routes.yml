@@ -5,5 +5,3 @@ After: framework/routes#coreroutes
 Director:
   rules:
     '' : 'Page_Controller'
-    'index' : 'Page_Controller'
-    'c/$ID' : 'Page_Controller'

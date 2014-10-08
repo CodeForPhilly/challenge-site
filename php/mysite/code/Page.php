@@ -93,4 +93,20 @@ class Page_Controller extends Controller {
 		//return $this->renderWith(array('Home','Page'));
 	}
 
+	public function c($arguments){
+		$params = $arguments->params();
+		if($arguments->param('ID') != NULL){
+			$this->PageID = $arguments->param('ID');
+			$c = $arguments->param('ID');
+			//check for page
+			$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
+			$d = $fire->get('challenges/'.$c.'/id');
+			var_dump($d);
+
+			//return $this->renderWith(array('Challenge','Page'));
+		}
+		var_dump($arguments->params());
+		//return $this->renderWith(array('Home','Page'));
+	}
+
 }
