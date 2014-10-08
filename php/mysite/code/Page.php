@@ -105,6 +105,7 @@ class Page_Controller extends Controller {
 			//return $this->renderWith(array('Challenge','Page'));
 		}
 		// var_dump($arguments->params());
+		$this->Title = 'Code for Philly Challenges';
 		return $this->renderWith(array('Home','Page'));
 	}
 
