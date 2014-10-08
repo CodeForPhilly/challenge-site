@@ -1,7 +1,7 @@
 // define our app and dependencies (remember to include firebase!)
 // demoUtils creates a unique sandbox URL for us to play in!
 var app = angular.module("challengeApp", ["firebase"]);
-
+jQuery(document).ready(function(){
 app.factory('appUtils', function ($q, $http, $timeout){
 	var storage = (function () {
 		var uid = new Date,
@@ -33,10 +33,12 @@ app.factory('appUtils', function ($q, $http, $timeout){
 app.factory("projectList", ["$firebase", '$rootScope', 
   function($firebase, $rootScope) {
      // create a reference to the Firebase where we will store our data
+     
      var ref = new Firebase($rootScope.demoUrl)+'/projects';
       
      // this uses AngularFire to create the synchronized array
      return $firebase(ref).$asArray();
+ }
   }
 ]);
 
@@ -98,7 +100,7 @@ app.run(function($rootScope) {
 	});
 });
 
-
+});
 ;(function(){
 
 $.backstretch("themes/feedo/img/bg01.jpg", {speed: 500});
