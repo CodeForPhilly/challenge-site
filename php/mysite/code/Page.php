@@ -32,7 +32,7 @@ class Page_Controller extends Controller {
 	 * @var array
 	 */
 	private static $allowed_actions = array (
-		'test','index'
+		'test','index','challenges'
 	);
 	 private static $url_handlers = array(
     );
@@ -54,8 +54,6 @@ class Page_Controller extends Controller {
 			$this->BackgroundImages = $f->myChildren()->sort('RAND()');
 			$this->TopImage = $f->myChildren()->sort('RAND()')->First();
 		}
-		
-
 		// Note: you should use SS template require tags inside your templates 
 		// instead of putting Requirements calls here.  However these are 
 		// included so that our older themes still work
@@ -63,10 +61,18 @@ class Page_Controller extends Controller {
 
 	public  function challenges($arguments){
 		$params = $arguments->params();
-		if($arguments->param('Action') != NULL){
+		if($arguments->param('ID') != NULL){
 			//check firebase for challenge
-			$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
-			return $this->renderWith(array('Challenge','Page'));
+			$id = $arguments->param('ID');
+			$c = $arguments->param('OtherID');
+			if($id == 'create'){
+				$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
+				$fire->set('challenges/'.$c.'/id',$c);
+				print_r('New Challenge '.$c.' created!'.PHP_EOL);
+			}
+			
+
+			//return $this->renderWith(array('Challenge','Page'));
 		}
 		var_dump($params);
 	}
@@ -74,11 +80,15 @@ class Page_Controller extends Controller {
 	public function index($arguments){
 		$params = $arguments->params();
 		if($arguments->param('ID') != NULL){
+			$this->PageID = $arguments->param('ID');
+			$c = $arguments->param('ID');
 			//check for page
 			$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
-			return $this->renderWith(array('Challenge','Page'));
+			$d = $fire->get('challenges/'.$c);
+			var_dump($d);
+			//return $this->renderWith(array('Challenge','Page'));
 		}
-		return $this->renderWith(array('Home','Page'));
+		//return $this->renderWith(array('Home','Page'));
 	}
 
 }

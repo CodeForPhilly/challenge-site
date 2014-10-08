@@ -38,18 +38,21 @@ Change it, enhance it and most importantly enjoy it!
       <script src="$ThemeDir/js/html5shiv.js"></script>
       <script src="$ThemeDir/js/respond.min.js"></script>
     <![endif]-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
-  	<script src="http://cdn.embed.ly/jquery.embedly-3.1.1.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+  	<script src="https://cdn.embed.ly/jquery.embedly-3.1.1.min.js" type="text/javascript"></script>
+  	<script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min.js"></script>
 </head>
-<body>
+<body itemscope itemtype="http://schema.org/Blog">
 	
 		<div class="container">
-			<div class="row">
+			<div class="row" ng-app="challengeApp" ng-controller="ChatCtrl">
 				<div class="col-md-6 col-md-offset-3 site">
 				
 				
 						<div class="site-title">
-							<h2>$Title</h2>
+							<h2 id="pageTitle" data-id="$PageID" data- itemprop="name">$Title</h2>
+							<meta itemprop="datePublished" content="2011-04-01">April 1, 2011</meta>
 						</div><! --/site top -->
 						
 						$Layout
