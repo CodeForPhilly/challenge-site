@@ -37,7 +37,7 @@ app.factory("projectList", ["$firebase", '$rootScope',
      var ref = new Firebase($rootScope.demoUrl)+'/projects';
       
      // this uses AngularFire to create the synchronized array
-     return $firebase(ref).$asArray();
+     return $firebase(ref);
  }
 ]);
 

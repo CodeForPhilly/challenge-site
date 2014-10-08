@@ -7,7 +7,7 @@ Change it, enhance it and most importantly enjoy it!
 -->
 
 <!--[if !IE]><!-->
-<html lang="$ContentLocale">
+<html ng-app="challengeApp" lang="$ContentLocale">
 <!--<![endif]-->
 <!--[if IE 6 ]><html lang="$ContentLocale" class="ie ie6"><![endif]-->
 <!--[if IE 7 ]><html lang="$ContentLocale" class="ie ie7"><![endif]-->
