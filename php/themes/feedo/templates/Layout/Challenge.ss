@@ -16,9 +16,7 @@
         <p>Don't see the project you want? Feel free to <a href='#'>Add another project to the list</a></p>
         <div class="list-group">
 		    <div class="list-group-item">
-		        <div class="row-action-primary">
-		            <i class="icon-material-folder"></i>
-		        </div>
+		        
 		        <div class="row-content">
 		            <div class="action-secondary"><i class="icon-material-info"></i></div>
 		            <h4 class="list-group-item-heading">Tile with an icon</h4>
@@ -27,9 +25,7 @@
 		    </div>
 		    <div class="list-group-separator"></div>
 		    <div class="list-group-item">
-		        <div class="row-action-primary">
-		            <i class="icon-material-folder"></i>
-		        </div>
+		        
 		        <div class="row-content">
 		            <div class="action-secondary"><i class="icon-material-info"></i></div>
 		            <h4 class="list-group-item-heading">Tile with an icon</h4>
@@ -38,9 +34,7 @@
 		    </div>
 		    <div class="list-group-separator"></div>
 		    <div class="list-group-item">
-		        <div class="row-action-primary">
-		            <i class="icon-material-folder"></i>
-		        </div>
+		        
 		        <div class="row-content">
 		            <div class="action-secondary"><i class="icon-material-info"></i></div>
 		            <h4 class="list-group-item-heading">Tile with an icon</h4>
