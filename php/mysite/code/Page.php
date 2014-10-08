@@ -66,13 +66,12 @@ class Page_Controller extends Controller {
 			//check firebase for challenge
 			$id = $arguments->param('ID');
 			$c = $arguments->param('OtherID');
+			$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
 			if($id == 'create'){
-				$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
 				$fire->set('challenges/'.$c.'/id',$c);
 				print_r('New Challenge '.$c.' created!'.PHP_EOL);
 				return $this->render();
 			}
-
 			//Check to see if challenge exists
 			$d = $fire->get('challenges/'.$id);
 			var_dump($d);
