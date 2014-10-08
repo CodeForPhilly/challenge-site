@@ -31,10 +31,11 @@ class Page_Controller extends Controller {
 	 *
 	 * @var array
 	 */
-	/*private static $allowed_actions = array (
-		'test','index','challenges'
+	private static $allowed_actions = array (
+		'challenges'
 	);
 	 private static $url_handlers = array(
+	 	'$P!' => 'challenges'
     );
 	public function test(){
 		// $f = Folder::get()->filter(array('Title'=>'backgrounds'))->First();
@@ -75,25 +76,9 @@ class Page_Controller extends Controller {
 			//return $this->renderWith(array('Challenge','Page'));
 		}
 		var_dump($params);
-	}*/
-
-	public function index($arguments){
-		$params = $arguments->params();
-		if($arguments->param('ID') != NULL){
-			$this->PageID = $arguments->param('ID');
-			$c = $arguments->param('ID');
-			//check for page
-			$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
-			$d = $fire->get('challenges/'.$c.'/id');
-			var_dump($d);
-
-			//return $this->renderWith(array('Challenge','Page'));
-		}
-		var_dump($arguments->params());
-		//return $this->renderWith(array('Home','Page'));
 	}
 
-	public function c($arguments){
+	public function index($arguments){
 		$params = $arguments->params();
 		if($arguments->param('ID') != NULL){
 			$this->PageID = $arguments->param('ID');
