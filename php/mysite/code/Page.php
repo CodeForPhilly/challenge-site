@@ -49,6 +49,7 @@ class Page_Controller extends Controller {
 
 	public function init() {
 		parent::init();
+		Config::inst()->update('SSViewer', 'theme', 'feedo');
 		$f = Folder::get()->filter(array('Title'=>'backgrounds'))->First();
 		if($f){
 			$this->BackgroundImages = $f->myChildren()->sort('RAND()');
