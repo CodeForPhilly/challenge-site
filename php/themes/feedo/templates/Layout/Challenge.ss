@@ -16,7 +16,7 @@
     <div class="tab-pane fade active in" id="projects">
         <p>Below are a list of projects you available for you to contribute to.<br>
            Don't see the project you want? Feel free to 
-           <a data-toggle="modal" data-target="#addProject" href="#">
+           <a href="c/$PageID/p/add">
            	<i class="icon-material-add-box"></i> 
            	Add another project to the list
            </a>
