@@ -95,7 +95,7 @@ app.factory("chatMessages", ["$firebase", '$rootScope',
 ]);*/
 
 app.controller("ProjectsCtrl", ["$scope", "projectList","icons",
-	function($scope, projectList){
+	function($scope, projectList, icons){
 		$scope.projects = projectList;
 		$scope.icons = icons;
 	}
