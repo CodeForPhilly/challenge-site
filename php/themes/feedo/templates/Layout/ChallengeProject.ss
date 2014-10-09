@@ -6,35 +6,82 @@
 		<p>$Description</p>
 	</div>
 	<ul class="nav nav-tabs" style="margin-bottom: 15px;">
-    <li class="active"><a href="#projects" data-toggle="tab">Show Projects</a></li>
-    <li><a href="#response" data-toggle="tab">View Responses</a></li>
-    <li><a href="#chat" data-toggle="tab">Chat about this</a></li>
-    
-    
-</ul>
+		<% if AddProject %>
+	    <li class="active"><a href="#add" data-toggle="tab">Add a Project</a></li>
+	    <% end_if %>
+	    <li><a href="#view" data-toggle="tab">View All Projects</a></li>
+	    <li><a href="#chat" data-toggle="tab">Chat about this</a></li>
+	    
+	    
+	</ul>
 <div ng-controller="ProjectsCtrl" id="myTabContent" class="tab-content">
-    <div class="tab-pane fade active in" id="projects">
-        <p>Below are a list of projects you available for you to contribute to.<br>
-           Don't see the project you want? Feel free to 
-           <a data-toggle="modal" data-target="#addProject" href="/c/$PageID/p/add">
-           	<i class="icon-material-add-box"></i> 
-           	Add another project to the list
-           </a>
+    <div class="tab-pane fade active in" id="add">
+        <p>Enter a civic project below.
         </p>
 
-        <h5>The Projects</h5>
+        <h5></h5>
         <div class="list-group">
-		    <div ng-repeat="project in projects" class="list-group-item">
-		    	<div class="row-action-primary">
-		            <i class="{{project.icon}}"></i>
-		        </div>
-		        <div class="row-content">
-		            <div class="action-secondary"><a href="{{project.link}}" target="_blank"><i class="icon-material-info"></i></a></div>
-		            <h4 class="list-group-item-heading">{{project.title}}</h4>
-		            <p class="list-group-item-text">\{{project.snippet}}</p>
-		        </div>
-		        <div class="list-group-separator"></div>
-		    </div>
+		    <form class="form-horizontal">
+				    <fieldset>
+				        <legend>The Project</legend>
+				        <div class="form-group">
+				            <label for="inputEmail" class="col-lg-2 control-label">Title</label>
+				            <div class="col-lg-10">
+				                <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+				            </div>
+				        </div>
+				        <div class="form-group">
+				            <label for="inputSnippet" class="col-lg-2 control-label">Snippet</label>
+				            <div class="col-lg-10">
+				                <textarea class="form-control" rows="3" id="snippet"></textarea>
+				                <span class="help-block">Keep it short and sweet.</span>
+				            </div>
+				        </div>
+				        <div class="form-group">
+				            <label class="col-lg-2 control-label">Icon</label>
+				            <div class="col-lg-10">
+				                <div class="radio radio-primary">
+				                    <label>
+				                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+				                        Option one is this
+				                    </label>
+				                </div>
+				                <div class="radio radio-primary">
+				                    <label>
+				                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+				                        Option two can be something else
+				                    </label>
+				                </div>
+				            </div>
+				        </div>
+				        <div class="form-group">
+				            <label for="select" class="col-lg-2 control-label">Selects</label>
+				            <div class="col-lg-10">
+				                <select class="form-control" id="select">
+				                    <option>1</option>
+				                    <option>2</option>
+				                    <option>3</option>
+				                    <option>4</option>
+				                    <option>5</option>
+				                </select>
+				                <br>
+				                <select multiple="" class="form-control">
+				                    <option>1</option>
+				                    <option>2</option>
+				                    <option>3</option>
+				                    <option>4</option>
+				                    <option>5</option>
+				                </select>
+				            </div>
+				        </div>
+				        <div class="form-group">
+				            <div class="col-lg-10 col-lg-offset-2">
+				                <button class="btn btn-default">Cancel</button>
+				                <button type="submit" class="btn btn-primary">Submit</button>
+				            </div>
+				        </div>
+				    </fieldset>
+				</form>
 		    
 		    
 		</div>

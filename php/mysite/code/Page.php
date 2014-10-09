@@ -109,7 +109,7 @@ class Page_Controller extends Controller {
 		'challenges'
 	);
 	 private static $url_handlers = array(
-	 	'$ID!/$ChallengeAction' => 'challenges'
+	 	'$ID!/$ChallengeItem/$ItemAction' => 'challenges'
     );
 	public function test(){
 		// $f = Folder::get()->filter(array('Title'=>'backgrounds'))->First();
@@ -134,6 +134,10 @@ class Page_Controller extends Controller {
 		// included so that our older themes still work
 	}
 
+	public function projects(){
+
+	}
+
 	public  function challenges($arguments){
 		$params = $arguments->params();
 		if($arguments->param('ID') != NULL){
@@ -150,13 +154,44 @@ class Page_Controller extends Controller {
 			$d = $fire->get('challenges/'.$id);
 			// var_dump(json_decode($d));
 			if($d != 'null'){
+				
 				$data = json_decode($d);
 				//Get Challenge Details
 				$this->Title = $data->title;
 				$this->Tag = $data->tag;
 				$this->Description = $data->description;
 
-				return $this->renderWith(array('Challenge','Page'));
+				//Check challenge action
+				switch ($arguments->param('ChallengeItem')) {
+					case 'p':
+						# projects...
+						if($arguments->param('ItemAction')== 'add'){
+							$this->AddProject = true;
+						}
+						return $this->renderWith(array('ChallengeProject','Page'));
+						break;
+					case 'r':
+						# responses...
+						if($arguments->param('ItemAction')== 'add'){
+							$this->AddProject = true;
+						}
+						return $this->renderWith(array('ChallengeResponse','Page'));
+						break;
+					case 'c':
+						# chats...
+						if($arguments->param('ItemAction')== 'add'){
+							$this->AddProject = true;
+						}
+						return $this->renderWith(array('ChallengeChat','Page'));
+						break;
+					
+					default:
+						# code...
+						
+						return $this->renderWith(array('Challenge','Page'));
+						break;
+				}
+				
 			}else{
 				// Challenge not found. Inform user
 				$this->Content = 'Challenge Not Found!';
