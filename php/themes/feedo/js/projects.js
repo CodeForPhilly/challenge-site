@@ -1,7 +1,4 @@
 app.run(function($rootScope,$firebase) {
-	jQuery(document).ready(function(){
-		console.log('GO');
-	});
 	var ref = new Firebase('https://challengepost.firebaseio.com');
 	var authData = ref.getAuth();
 	if(authData){
@@ -21,6 +18,7 @@ app.run(function($rootScope,$firebase) {
 				ref.child('users').child(authData.uid).set(authData);
 				console.log("User ID: " + authData.uid + ", Provider: " + authData.provider);
 			}
+			console.log("User ID: " + authData.uid + ", Provider: " + authData.provider);
 		});
 	}
 	
