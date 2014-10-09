@@ -7,7 +7,7 @@
 	</div>
 	<ul class="nav nav-tabs" style="margin-bottom: 15px;">
     <li class="active"><a href="#projects" data-toggle="tab">Show Projects</a></li>
-    <li><a href="#response" data-toggle="tab">View Responses</a></li>
+    <li><a href="#response" data-toggle="tab">Responses</a></li>
     <li><a href="#chat" data-toggle="tab">Chat about this</a></li>
     
     
