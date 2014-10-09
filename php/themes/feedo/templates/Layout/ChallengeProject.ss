@@ -27,13 +27,13 @@
 				    <fieldset>
 				        <legend>The Project</legend>
 				        <div class="form-group">
-				            <label for="inputEmail" class="col-lg-2 control-label">Title</label>
+				            <label for="inputTitle" class="col-lg-2 control-label">Title</label>
 				            <div class="col-lg-10">
-				                <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+				                <input type="text" class="form-control" id="inputTitle" placeholder="Project Title">
 				            </div>
 				        </div>
 				        <div class="form-group">
-				            <label for="inputSnippet" class="col-lg-2 control-label">Snippet</label>
+				            <label for="snippet" class="col-lg-2 control-label">Snippet</label>
 				            <div class="col-lg-10">
 				                <textarea class="form-control" rows="3" id="snippet"></textarea>
 				                <span class="help-block">Keep it short and sweet.</span>
@@ -41,11 +41,11 @@
 				        </div>
 				        <div class="form-group">
 				            <label class="col-lg-2 control-label">Icon</label>
-				            <div ng-repeat="(icon,iconClass) in icons" class="col-lg-10">
-				                <div class="radio radio-primary">
+				            <div class="col-lg-10">
+				                <div ng-repeat="(key,value) in icons" class="radio radio-primary">
 				                    <label>
 				                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-				                        <i class="{{iconClass}}"></i> {{icon}}
+				                        <i class="{{value}}"></i> {{key}}
 				                    </label>
 				                </div>
 				            </div>
