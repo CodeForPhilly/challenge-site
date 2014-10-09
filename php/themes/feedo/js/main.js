@@ -96,7 +96,8 @@ app.factory("chatMessages", ["$firebase", '$rootScope',
 
 app.controller("ProjectsCtrl", ["$scope","$firebase", "projectList","icons",
 	function($scope,$firebase, projectList, icons){
-		var ref = new Firebase('https://challengepost.firebaseio.com/challenges/101/projects').$asArray();
+		var fb = new Firebase('https://challengepost.firebaseio.com/challenges/101/projects');
+		var ref = $firebase($fb).$asArray();
 		$scope.projects = projectList;
 		$scope.icons = icons;
 		$scope.add = function(){
