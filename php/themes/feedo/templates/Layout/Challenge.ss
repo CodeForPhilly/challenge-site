@@ -57,7 +57,7 @@
 		    </div>
 		    <div class="panel-body">
 		        There are currently no responses to this challenge. Be the first!
-		        <a href="javascript:void(0)" class="btn btn-success btn-xs">Submit a Response</a>
+		        <a data-toggle="modal" data-target="#addProject" href="javascript:void(0)" class="btn btn-success btn-xs">Submit a Response</a>
 		    </div>
 		</div>
     </div>
@@ -72,7 +72,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title">Add a Project</h4>
+                <h4 class="modal-title">$Tag</h4>
             </div>
             <div class="modal-body">
                 <p>Housekeeping. standby.</p>

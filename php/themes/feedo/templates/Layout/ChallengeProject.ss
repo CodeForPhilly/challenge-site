@@ -80,16 +80,27 @@
 		</div>
     </div>
 
-    <div class="tab-pane fade" id="response">
+    <div class="tab-pane fade" id="view">
         <div class="panel panel-info">
 		    <div class="panel-heading">
-		        <h3 class="panel-title">Responses to #$Tag</h3>
+		        <h3 class="panel-title">All Projects for $Tag</h3>
 		    </div>
 		    <div class="panel-body">
-		        There are currently no responses to this challenge. Be the first!
-		        <a href="javascript:void(0)" class="btn btn-success btn-xs">Submit a Response</a>
-		    </div>
-		</div>
+		    	<% loop Projects %>
+		        <div class="well">
+		        	<div class="row-action-primary">
+			            <i class="$icon"></i>
+			        </div>
+			        <div class="row-content">
+			            <div class="action-secondary"><a href="$link" target="_blank"><i class="icon-material-info"></i></a></div>
+			            <h4 class="list-group-item-heading">$title</h4>
+			            <p class="list-group-item-text">$snippet</p>
+			        </div>
+			        <div class="list-group-separator"></div>
+		        </div>
+		        <% end_with %>
+	    	</div>
+	    </div>
     </div>
 
 </div>

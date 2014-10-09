@@ -37,7 +37,8 @@ class Project_Controller extends Controller{
 		$params = $arguments->params();
 		$vars = $arguments->requestVars();
 		if(!array_key_exists('title', $vars)){
-			print_r('Missing project title!'.PHP_EOL);exit;
+			// print_r('Missing project title!'.PHP_EOL);exit;
+			$title = 'default';
 		}else{
 			$title = $vars['title'];
 		}
@@ -58,8 +59,20 @@ class Project_Controller extends Controller{
 					print_r('New Project added to '.$action.' :'.$title.PHP_EOL);
 					//return $this->render();
 				}
-
+			}else if ($action == 'list') {
+				# code...
+				$a = new ArrayList();
+				$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
+				$all = $fire->get('challenges/'.$arguments->param('OtherID').'/projects');
+				$all = json_decode($all,true);
+				foreach ($all as $d) {
+					# code...
+					$a->push(new ArrayData($d));
+				}
+				var_dump($a->First());
 			}
+		}else{
+			
 		}
 	}
 
@@ -160,8 +173,16 @@ class Page_Controller extends Controller {
 		);
 	}
 
-	public function projects(){
-
+	public function Projects(){
+		$a = new ArrayList();
+		$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
+		$all = $fire->get('challenges/'.$this->PageID.'/projects');
+		$all = json_decode($all,true);
+		foreach ($all as $d) {
+			# code...
+			$a->push(new ArrayData($d));
+		}
+		return $a;
 	}
 
 	public function Icons(){
@@ -178,6 +199,7 @@ class Page_Controller extends Controller {
 	public  function challenges($arguments){
 		$params = $arguments->params();
 		$this->PageID = $arguments->param('ID');
+		$this->ProjectID = $arguments->param('ID');
 		if($arguments->param('ID') != NULL){
 			//check firebase for challenge
 			$id = $arguments->param('ID');
