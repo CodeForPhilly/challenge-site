@@ -68,7 +68,7 @@ class Project_Controller extends Controller{
 		$vars = $arguments->requestVars();
 		// var_dump($params);
 		if(!array_key_exists('value', $vars)){
-			print_r('Missing project value!'.PHP_EOL);exit;
+			// print_r('Missing project value!'.PHP_EOL);
 		}else{
 			$value = $vars['value'];
 		}
@@ -85,6 +85,15 @@ class Project_Controller extends Controller{
 				print_r('New Project added to '.$action.' :'.$name.PHP_EOL);
 				//return $this->render();
 			}
+		}else{
+			$a = new ArrayList();
+			$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
+			$data = $fire->get('_icons');
+			$data = json_decode($data,true);
+			foreach ($data as $icon => $iconClass) {
+				$a->push(new ArrayData(array('icon'=>$icon,'iconClass'=>$iconClass)));
+			}
+			var_dump($a->First());
 		}
 	}
 }
@@ -106,7 +115,7 @@ class Page_Controller extends Controller {
 	 * @var array
 	 */
 	private static $allowed_actions = array (
-		'challenges'
+		'challenges','Icons'
 	);
 	 private static $url_handlers = array(
 	 	'$ID!/$ChallengeItem/$ItemAction' => 'challenges'
@@ -153,6 +162,17 @@ class Page_Controller extends Controller {
 
 	public function projects(){
 
+	}
+
+	public function Icons(){
+		$a = new ArrayList();
+		$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
+		$data = $fire->get('_icons');
+		$data = json_decode($data,true);
+		foreach ($data as $icon => $iconClass) {
+			$a->push(new ArrayData(array('icon'=>$icon,'iconClass'=>$iconClass)));
+		}
+		return $a;
 	}
 
 	public  function challenges($arguments){
