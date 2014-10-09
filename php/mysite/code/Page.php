@@ -140,6 +140,7 @@ class Page_Controller extends Controller {
 
 	public  function challenges($arguments){
 		$params = $arguments->params();
+		$this->PageID = $arguments->param('ID');
 		if($arguments->param('ID') != NULL){
 			//check firebase for challenge
 			$id = $arguments->param('ID');
