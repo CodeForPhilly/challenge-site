@@ -131,7 +131,7 @@ class Page_Controller extends Controller {
 		'challenges','Icons'
 	);
 	 private static $url_handlers = array(
-	 	'$ID!/$ChallengeItem/$ItemAction' => 'challenges'
+	 	'$ID!/$ChallengeItem/$ItemAction/$ItemValue' => 'challenges'
     );
 	public function test(){
 		// $f = Folder::get()->filter(array('Title'=>'backgrounds'))->First();
@@ -177,6 +177,18 @@ class Page_Controller extends Controller {
 		$a = new ArrayList();
 		$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
 		$all = $fire->get('challenges/'.$this->PageID.'/projects');
+		$all = json_decode($all,true);
+		foreach ($all as $d) {
+			# code...
+			$a->push(new ArrayData($d));
+		}
+		return $a;
+	}
+
+	public function Responses(){
+		$a = new ArrayList();
+		$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
+		$all = $fire->get('challenges/'.$this->PageID.'/responses');
 		$all = json_decode($all,true);
 		foreach ($all as $d) {
 			# code...
@@ -238,8 +250,16 @@ class Page_Controller extends Controller {
 						break;
 					case 'r':
 						# responses...
-						if($arguments->param('ItemAction')== 'add'){
-							$this->AddProject = true;
+						if($arguments->param('ItemAction')){
+							$a = new ArrayList();
+							$this->ViewResponse = true;
+							$d = $fire->get('challenges/'.$c.'/responses/'.$arguments->param('ItemAction'));
+							$data = json_decode($d,true);
+							foreach ($data as $g) {
+								# code...
+								$a->push(new ArrayData($g));
+							}
+							$this->Response = $a->First();
 						}
 						return $this->renderWith(array('ChallengeResponse','Page'));
 						break;
@@ -247,6 +267,7 @@ class Page_Controller extends Controller {
 						# chats...
 						if($arguments->param('ItemAction')== 'add'){
 							$this->AddProject = true;
+
 						}
 						return $this->renderWith(array('ChallengeChat','Page'));
 						break;

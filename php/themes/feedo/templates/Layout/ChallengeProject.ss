@@ -114,84 +114,54 @@
 </div>
 </div>
 
-<div class="modal" id="addProject">
+<div ng-controller="ResponseCtrl" class="modal" id="addProject">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title">Add a Project</h4>
+                <h4 class="modal-title">Submit a Response</h4>
             </div>
             <div class="modal-body">
-                <p>Add a Project to this challenge</p>
-                <form class="form-horizontal">
+                <form ng-submit="add()" class="form-horizontal">
 				    <fieldset>
-				        <legend>Legend</legend>
+				        <legend>Response to Challenge</legend>
 				        <div class="form-group">
-				            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+				            <label for="inputTitle" class="col-lg-2 control-label">Title</label>
 				            <div class="col-lg-10">
-				                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+				                <input type="text" pattern="[a-zA-Z0-9\\s]+" ng-model="title" class="form-control" id="inputTitle" placeholder="Project Title">
 				            </div>
 				        </div>
 				        <div class="form-group">
-				            <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+				            <label for="inputLink" class="col-lg-2 control-label">Link to Code</label>
 				            <div class="col-lg-10">
-				                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-				                <div class="checkbox">
-				                    <label>
-				                        <input type="checkbox"> Checkbox
-				                    </label>
-				                </div>
+				                <input type="url" ng-model="link" class="form-control" id="inputLink" placeholder="Link to plunkr, jsbin, gist or other code site">
 				            </div>
 				        </div>
 				        <div class="form-group">
-				            <label for="inputFile" class="col-lg-2 control-label">File</label>
+				            <label for="code" class="col-lg-2 control-label">Code</label>
 				            <div class="col-lg-10">
-				                <input type="text" readonly="" class="form-control floating-label" placeholder="Browse...">
-				                <input type="file" id="inputFile" multiple="">
+				                <textarea ng-model="code" class="form-control" rows="3" id="code"></textarea>
+				                <span class="help-block">Paste your code here if you'd like</span>
 				            </div>
 				        </div>
 				        <div class="form-group">
-				            <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+				            <label for="issues" class="col-lg-2 control-label">List of Issues</label>
 				            <div class="col-lg-10">
-				                <textarea class="form-control" rows="3" id="textArea"></textarea>
-				                <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+				                <textarea ng-model="issues" class="form-control" rows="3" id="issues"></textarea>
+				                <span class="help-block">List any issues you would like challengers to help fix.</span>
 				            </div>
 				        </div>
 				        <div class="form-group">
-				            <label class="col-lg-2 control-label">Radios</label>
+				            <label class="col-lg-2 control-label">Project</label>
 				            <div class="col-lg-10">
+				            	<% loop $Projects %>
 				                <div class="radio radio-primary">
 				                    <label>
-				                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-				                        Option one is this
+				                        <input type="radio" ng-model="project" name="optionsRadios" id="optionsRadios$icon" value="$title">
+				                        <i class="$icon"></i> $title
 				                    </label>
 				                </div>
-				                <div class="radio radio-primary">
-				                    <label>
-				                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-				                        Option two can be something else
-				                    </label>
-				                </div>
-				            </div>
-				        </div>
-				        <div class="form-group">
-				            <label for="select" class="col-lg-2 control-label">Selects</label>
-				            <div class="col-lg-10">
-				                <select class="form-control" id="select">
-				                    <option>1</option>
-				                    <option>2</option>
-				                    <option>3</option>
-				                    <option>4</option>
-				                    <option>5</option>
-				                </select>
-				                <br>
-				                <select multiple="" class="form-control">
-				                    <option>1</option>
-				                    <option>2</option>
-				                    <option>3</option>
-				                    <option>4</option>
-				                    <option>5</option>
-				                </select>
+				                <% end_loop %>
 				            </div>
 				        </div>
 				        <div class="form-group">

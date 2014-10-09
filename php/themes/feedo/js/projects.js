@@ -1,5 +1,5 @@
 app.run(function($rootScope,$firebase) {
-	var ref = new Firebase('https://challengepost.firebaseio.com');
+	/*var ref = new Firebase('https://challengepost.firebaseio.com');
 	var authData = ref.getAuth();
 	if(authData){
 		console.log("User ID: " + authData.uid + ", Provider: " + authData.provider);
@@ -20,6 +20,6 @@ app.run(function($rootScope,$firebase) {
 			}
 			console.log("User ID: " + authData.uid + ", Provider: " + authData.provider);
 		});
-	}
+	}*/
 	
 });

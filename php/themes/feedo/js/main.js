@@ -39,6 +39,16 @@ app.factory("projectList", ["$firebase", '$rootScope',
 		return $firebase(ref).$asArray();
  }
 ]);
+
+app.factory("responseList", ["$firebase", '$rootScope', 
+  function($firebase, $rootScope) {
+     // create a reference to the Firebase where we will store our data
+		var ref = new Firebase('https://challengepost.firebaseio.com/challenges/101/responses');
+
+		// this uses AngularFire to create the synchronized array
+		return $firebase(ref).$asArray();
+ }
+]);
 app.factory("icons", ["$firebase", '$rootScope', 
   function($firebase, $rootScope) {
      // create a reference to the Firebase where we will store our data
@@ -110,6 +120,30 @@ app.controller("ProjectsCtrl", ["$scope","$firebase", "projectList","icons",
 				issues: $scope.issues,
 				link: $scope.link,
 				icon: $scope.icon
+			}).then(function(ref){
+				var id = ref.name();
+				console.log('added record '+ id);
+			})
+		}
+	}
+]);
+
+app.controller("ResponseCtrl", ["$scope","$firebase", "projectList","icons",
+	function($scope,$firebase, projectList, icons){
+		var fb = new Firebase('https://challengepost.firebaseio.com/challenges/101/responses');
+		var ref = $firebase(fb).$asArray();
+		$scope.projects = projectList;
+		$scope.icons = icons;
+		$scope.add = function(){
+			//normalize title
+			var id = $scope.title.toLowerCase();
+			id = id.trim().replace(" ","-");
+			var save = projectList.$add({
+				title: $scope.title,
+				description: $scope.description,
+				code: $scope.code,
+				link: $scope.link,
+				videoLink: $scope.videoLink
 			}).then(function(ref){
 				var id = ref.name();
 				console.log('added record '+ id);
