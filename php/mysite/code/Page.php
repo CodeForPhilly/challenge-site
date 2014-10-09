@@ -160,7 +160,7 @@ class Page_Controller extends Controller {
 	        'https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js',
 	    	'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js',
 	        'https://cdn.embed.ly/jquery.embedly-3.1.1.min.js',
-	        'https://cdn.firebase.com/js/client/1.0.21/firebase.js',
+	        'https://cdn.firebase.com/js/client/1.1.0/firebase.js',
 	        'https://cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min.js',
 	        'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js',
 	        'themes/feedo/js/jquery.backstretch.min.js',
