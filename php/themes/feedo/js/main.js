@@ -138,7 +138,7 @@ app.controller("ResponseCtrl", ["$scope","$firebase", "projectList","icons",
 			//normalize title
 			var id = $scope.title.toLowerCase();
 			id = id.trim().replace(" ","-");
-			var save = projectList.$add({
+			var save = ref.$add({
 				title: $scope.title,
 				description: $scope.description,
 				code: $scope.code,
