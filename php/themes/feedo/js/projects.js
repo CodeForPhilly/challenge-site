@@ -19,6 +19,7 @@ app.run(function($rootScope,$firebase) {
 			} else if (authData) {
 				// user authenticated with Firebase
 				ref.child('users').child(authData.uid).set(authData);
+				console.log("User ID: " + authData.uid + ", Provider: " + authData.provider);
 			}
 		});
 	}
