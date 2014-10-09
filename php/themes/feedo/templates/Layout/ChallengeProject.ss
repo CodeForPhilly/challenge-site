@@ -55,6 +55,7 @@
 				                        $icon
 				                    </label>
 				                </div>
+				                <% end_loop %>
 				            </div>
 				        </div>
 				        <div class="form-group">
