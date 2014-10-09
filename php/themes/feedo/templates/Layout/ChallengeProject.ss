@@ -52,7 +52,7 @@
 				                <div class="radio radio-primary">
 				                    <label>
 				                        <input type="radio" name="optionsRadios" id="optionsRadios$icon" value="$icon">
-				                        <i class="$iconClass"></i>$icon
+				                        <i class="$iconClass"></i> $icon
 				                    </label>
 				                </div>
 				                <% end_loop %>
