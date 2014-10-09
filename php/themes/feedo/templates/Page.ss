@@ -47,7 +47,7 @@ Change it, enhance it and most importantly enjoy it!
 				
 				
 						<div class="site-title">
-							<h2 id="pageTitle" data-id="$PageID" data- itemprop="name">$Title</h2>
+							<h2 id="pageTitle" data-id="$PageID" data- itemprop="name"><a href="/c/$PageID">$Title</a></h2>
 						</div><! --/site top -->
 						
 						$Layout

@@ -13,7 +13,6 @@
 	    <li><a href="#view" data-toggle="tab">View All Projects</a></li>
 	    <li><a href="#chat" data-toggle="tab">Chat about this</a></li>
 	    
-	    
 	</ul>
 <div ng-controller="ProjectsCtrl" id="myTabContent" class="tab-content">
 	<% if AddProject %>
