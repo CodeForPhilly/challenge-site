@@ -147,6 +147,7 @@ app.controller("ResponseCtrl", ["$scope","$firebase", "projectList","icons",
 			}).then(function(ref){
 				var id = ref.name();
 				console.log('added record '+ id);
+				$('#addProject').modal('hide');
 			})
 		}
 	}
