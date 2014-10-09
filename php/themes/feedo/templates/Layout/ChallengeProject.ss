@@ -44,7 +44,7 @@
 				            <div class="col-lg-10">
 				                <div ng-repeat="(key,value) in icons" class="radio radio-primary">
 				                    <label>
-				                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+				                        <input type="radio" name="optionsRadios" id="optionsRadios{{key}}" value="{{key}}" checked="">
 				                        <i class="{{value}}"></i> {{key}}
 				                    </label>
 				                </div>
