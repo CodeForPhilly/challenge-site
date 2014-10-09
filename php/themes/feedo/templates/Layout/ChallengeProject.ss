@@ -48,10 +48,16 @@
 				        <div class="form-group">
 				            <label class="col-lg-2 control-label">Icon</label>
 				            <div class="col-lg-10">
-				                <div ng-repeat="(key,value) in icons" class="radio radio-primary">
+				                <div class="radio radio-primary">
 				                    <label>
-				                        <input type="radio" name="optionsRadios" id="optionsRadios{{key}}" value="{{key}}">
-				                        {{key}}
+				                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="bike">
+				                        bike
+				                    </label>
+				                </div>
+				                <div class="radio radio-primary">
+				                    <label>
+				                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="bus">
+				                        bus
 				                    </label>
 				                </div>
 				            </div>
