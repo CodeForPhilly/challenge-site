@@ -23,26 +23,33 @@
 
         <h5></h5>
         <div class="list-group">
-		    <form class="form-horizontal">
+		    <form ng-submit="add()" class="form-horizontal">
 				    <fieldset>
 				        <legend>The Project</legend>
 				        <div class="form-group">
 				            <label for="inputTitle" class="col-lg-2 control-label">Title</label>
 				            <div class="col-lg-10">
-				                <input type="text" class="form-control" id="inputTitle" placeholder="Project Title">
+				                <input type="text" ng-model="title" class="form-control" id="inputTitle" placeholder="Project Title">
 				            </div>
 				        </div>
 				        <div class="form-group">
 				            <label for="inputLink" class="col-lg-2 control-label">Project URL</label>
 				            <div class="col-lg-10">
-				                <input type="text" class="form-control" id="inputLink" placeholder="Code for Philly Project URL">
+				                <input type="text" ng-model="link" class="form-control" id="inputLink" placeholder="Code for Philly Project URL">
 				            </div>
 				        </div>
 				        <div class="form-group">
-				            <label for="snippet" class="col-lg-2 control-label">Snippet</label>
+				            <label for="snippet" class="col-lg-2 control-label">Brief Description</label>
 				            <div class="col-lg-10">
-				                <textarea class="form-control" rows="3" id="snippet"></textarea>
+				                <textarea ng-model="snippet" class="form-control" rows="3" id="snippet"></textarea>
 				                <span class="help-block">Keep it short and sweet.</span>
+				            </div>
+				        </div>
+				        <div class="form-group">
+				            <label for="issues" class="col-lg-2 control-label">List of Issues</label>
+				            <div class="col-lg-10">
+				                <textarea ng-model="issues" class="form-control" rows="3" id="issues"></textarea>
+				                <span class="help-block">List any issues you would like challengers to help fix.</span>
 				            </div>
 				        </div>
 				        <div class="form-group">
@@ -51,7 +58,7 @@
 				            	<% loop $Icons %>
 				                <div class="radio radio-primary">
 				                    <label>
-				                        <input type="radio" name="optionsRadios" id="optionsRadios$icon" value="$icon">
+				                        <input type="radio" ng-model="icon" name="optionsRadios" id="optionsRadios$icon" value="$icon">
 				                        <i class="$iconClass"></i> $icon
 				                    </label>
 				                </div>

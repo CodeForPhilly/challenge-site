@@ -94,10 +94,24 @@ app.factory("chatMessages", ["$firebase", '$rootScope',
   }
 ]);*/
 
-app.controller("ProjectsCtrl", ["$scope", "projectList","icons",
-	function($scope, projectList, icons){
+app.controller("ProjectsCtrl", ["$scope","$firebase", "projectList","icons",
+	function($scope,$firebase, projectList, icons){
+		var ref = new Firebase('https://challengepost.firebaseio.com/challenges/101/projects').$asArray();
 		$scope.projects = projectList;
 		$scope.icons = icons;
+		$scope.add = function(){
+			var save = projectList.$add({
+				title: $scope.title,
+				snippet: $scope.snippet,
+				issues: $scope.issues,
+				link: $scope.link,
+				icon: $scope.icon
+			}).then(function(ref){
+				var id = ref.name();
+				console.log('added record '+ id);
+				ref.$indexFor(id);
+			})
+		}
 	}
 ]);
 
