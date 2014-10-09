@@ -39,6 +39,15 @@ app.factory("projectList", ["$firebase", '$rootScope',
 		return $firebase(ref).$asArray();
  }
 ]);
+app.factory("icons", ["$firebase", '$rootScope', 
+  function($firebase, $rootScope) {
+     // create a reference to the Firebase where we will store our data
+		var ref = new Firebase('https://challengepost.firebaseio.com/_icons');
+
+		// this uses AngularFire to create the synchronized array
+		return $firebase(ref).$asArray();
+ }
+]);
 
 /*app.factory("challengeChatMessages", ["$firebase", '$rootScope', 
   function($firebase, $rootScope) {
@@ -85,9 +94,10 @@ app.factory("chatMessages", ["$firebase", '$rootScope',
   }
 ]);*/
 
-app.controller("ProjectsCtrl", ["$scope", "projectList",
+app.controller("ProjectsCtrl", ["$scope", "projectList","icons"
 	function($scope, projectList){
 		$scope.projects = projectList;
+		$scope.icons = icons;
 	}
 ]);
 

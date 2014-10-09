@@ -1,3 +1,4 @@
+
 <div id="challengeContent" class="row">
 <h4 rel="tooltip" class="hashtag" data-toggle="tooltip" data-placement="bottom" title="Use this tag when sharing.">#$Tag</h4>
 <div class="well">
@@ -39,39 +40,13 @@
 				        </div>
 				        <div class="form-group">
 				            <label class="col-lg-2 control-label">Icon</label>
-				            <div class="col-lg-10">
+				            <div ng-repeat="(icon,iconClass) in icons" class="col-lg-10">
 				                <div class="radio radio-primary">
 				                    <label>
 				                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-				                        Option one is this
+				                        <i class="{{iconClass}}"></i> {{icon}}
 				                    </label>
 				                </div>
-				                <div class="radio radio-primary">
-				                    <label>
-				                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-				                        Option two can be something else
-				                    </label>
-				                </div>
-				            </div>
-				        </div>
-				        <div class="form-group">
-				            <label for="select" class="col-lg-2 control-label">Selects</label>
-				            <div class="col-lg-10">
-				                <select class="form-control" id="select">
-				                    <option>1</option>
-				                    <option>2</option>
-				                    <option>3</option>
-				                    <option>4</option>
-				                    <option>5</option>
-				                </select>
-				                <br>
-				                <select multiple="" class="form-control">
-				                    <option>1</option>
-				                    <option>2</option>
-				                    <option>3</option>
-				                    <option>4</option>
-				                    <option>5</option>
-				                </select>
 				            </div>
 				        </div>
 				        <div class="form-group">
@@ -82,8 +57,6 @@
 				        </div>
 				    </fieldset>
 				</form>
-		    
-		    
 		</div>
     </div>
 
