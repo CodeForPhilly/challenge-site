@@ -1,4 +1,4 @@
-app.run(function($rootScope) {
+app.run(function($rootScope,$firebase) {
 	jQuery(document).ready(function(){
 		console.log('GO');
 	});
