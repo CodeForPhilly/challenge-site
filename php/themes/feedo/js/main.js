@@ -143,7 +143,7 @@ app.controller("ResponseCtrl", ["$scope","$firebase", "projectList","icons",
 				description: $scope.description,
 				code: $scope.code,
 				link: $scope.link,
-				videoLink: $scope.videoLink
+				project: $scope.project
 			}).then(function(ref){
 				var id = ref.name();
 				console.log('added record '+ id);
