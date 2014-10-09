@@ -166,6 +166,12 @@ class Page_Controller extends Controller {
 				switch ($arguments->param('ChallengeItem')) {
 					case 'p':
 						# projects...
+						Requirements::combine_files(
+					    'projects.challenge.js',
+					    array(
+					        'themes/feedo/js/projects.js'
+					    )
+						);
 						if($arguments->param('ItemAction')== 'add'){
 							$this->AddProject = true;
 						}
