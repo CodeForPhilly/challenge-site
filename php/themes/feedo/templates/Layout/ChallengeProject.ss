@@ -29,13 +29,13 @@
 				        <div class="form-group">
 				            <label for="inputTitle" class="col-lg-2 control-label">Title</label>
 				            <div class="col-lg-10">
-				                <input type="text" ng-model="title" class="form-control" id="inputTitle" placeholder="Project Title">
+				                <input type="text" pattern="[a-zA-Z0-9]+" ng-model="title" class="form-control" id="inputTitle" placeholder="Project Title">
 				            </div>
 				        </div>
 				        <div class="form-group">
 				            <label for="inputLink" class="col-lg-2 control-label">Project URL</label>
 				            <div class="col-lg-10">
-				                <input type="text" ng-model="link" class="form-control" id="inputLink" placeholder="Code for Philly Project URL">
+				                <input type="url" ng-model="link" class="form-control" id="inputLink" placeholder="Code for Philly Project URL">
 				            </div>
 				        </div>
 				        <div class="form-group">
@@ -58,7 +58,7 @@
 				            	<% loop $Icons %>
 				                <div class="radio radio-primary">
 				                    <label>
-				                        <input type="radio" ng-model="icon" name="optionsRadios" id="optionsRadios$icon" value="$icon">
+				                        <input type="radio" ng-model="icon" name="optionsRadios" id="optionsRadios$icon" value="$iconClass">
 				                        <i class="$iconClass"></i> $icon
 				                    </label>
 				                </div>
