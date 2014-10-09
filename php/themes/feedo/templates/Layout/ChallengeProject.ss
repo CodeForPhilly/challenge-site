@@ -33,6 +33,12 @@
 				            </div>
 				        </div>
 				        <div class="form-group">
+				            <label for="inputLink" class="col-lg-2 control-label">Project URL</label>
+				            <div class="col-lg-10">
+				                <input type="text" class="form-control" id="inputLink" placeholder="Code for Philly Project URL">
+				            </div>
+				        </div>
+				        <div class="form-group">
 				            <label for="snippet" class="col-lg-2 control-label">Snippet</label>
 				            <div class="col-lg-10">
 				                <textarea class="form-control" rows="3" id="snippet"></textarea>
@@ -44,8 +50,8 @@
 				            <div class="col-lg-10">
 				                <div ng-repeat="(key,value) in icons" class="radio radio-primary">
 				                    <label>
-				                        <input type="radio" name="optionsRadios" id="optionsRadios{{key}}" value="{{key}}" checked="">
-				                        <i class="{{value}}"></i> {{key}}
+				                        <input type="radio" name="optionsRadios" id="optionsRadios{{key}}" value="{{key}}">
+				                        {{key}}
 				                    </label>
 				                </div>
 				            </div>
