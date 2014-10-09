@@ -97,14 +97,13 @@ app.factory("chatMessages", ["$firebase", '$rootScope',
 app.controller("ProjectsCtrl", ["$scope","$firebase", "projectList","icons",
 	function($scope,$firebase, projectList, icons){
 		var fb = new Firebase('https://challengepost.firebaseio.com/challenges/101/projects');
-		
+		var ref = $firebase(fb).$asArray();
 		$scope.projects = projectList;
 		$scope.icons = icons;
 		$scope.add = function(){
 			//normalize title
 			var id = $scope.title.toLowerCase();
 			id = id.trim().replace(" ","-");
-			var ref = $firebase(fb).child(id).$asArray();
 			var save = projectList.$add({
 				title: $scope.title,
 				snippet: $scope.snippet,
