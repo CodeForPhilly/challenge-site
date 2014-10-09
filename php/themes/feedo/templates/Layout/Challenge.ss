@@ -67,16 +67,64 @@
 </div>
 </div>
 
-<div class="modal" id="addProject">
+<div ng-controller="ResponseCtrl" class="modal" id="addProject">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title">$Tag</h4>
+                <h4 class="modal-title">Submit a Response</h4>
             </div>
             <div class="modal-body">
-                <p>Housekeeping. standby.</p>
-                
+                <form ng-submit="add()" class="form-horizontal">
+				    <fieldset>
+				        <legend>Response to Challenge</legend>
+				        <div class="form-group">
+				            <label for="inputTitle" class="col-lg-2 control-label">Title</label>
+				            <div class="col-lg-10">
+				                <input type="text" pattern="[a-zA-Z0-9\\s]+" ng-model="title" class="form-control" id="inputTitle" placeholder="Project Title">
+				            </div>
+				        </div>
+				        <div class="form-group">
+				            <label for="inputLink" class="col-lg-2 control-label">Link to Code</label>
+				            <div class="col-lg-10">
+				                <input type="url" ng-model="link" class="form-control" id="inputLink" placeholder="Link to plunkr, jsbin, gist or other code site">
+				            </div>
+				        </div>
+				        <div class="form-group">
+				            <label for="code" class="col-lg-2 control-label">Code</label>
+				            <div class="col-lg-10">
+				                <textarea ng-model="code" class="form-control" rows="3" id="code"></textarea>
+				                <span class="help-block">Paste your code here if you'd like</span>
+				            </div>
+				        </div>
+				        <div class="form-group">
+				            <label for="issues" class="col-lg-2 control-label">List of Issues</label>
+				            <div class="col-lg-10">
+				                <textarea ng-model="issues" class="form-control" rows="3" id="issues"></textarea>
+				                <span class="help-block">List any issues you would like challengers to help fix.</span>
+				            </div>
+				        </div>
+				        <div class="form-group">
+				            <label class="col-lg-2 control-label">Project</label>
+				            <div class="col-lg-10">
+				            	<% loop $Projects %>
+				                <div class="radio radio-primary">
+				                    <label>
+				                        <input type="radio" ng-model="project" name="optionsRadios" id="optionsRadios$icon" value="$title">
+				                        <i class="$icon"></i> $title
+				                    </label>
+				                </div>
+				                <% end_loop %>
+				            </div>
+				        </div>
+				        <div class="form-group">
+				            <div class="col-lg-10 col-lg-offset-2">
+				                <button class="btn btn-default">Cancel</button>
+				                <button type="submit" class="btn btn-primary">Submit</button>
+				            </div>
+				        </div>
+				    </fieldset>
+				</form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
