@@ -45,7 +45,7 @@ app.factory("icons", ["$firebase", '$rootScope',
 		var ref = new Firebase('https://challengepost.firebaseio.com/_icons');
 
 		// this uses AngularFire to create the synchronized array
-		return $firebase(ref).$asArray();
+		return $firebase(ref).$asObject();
  }
 ]);
 
