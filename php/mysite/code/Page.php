@@ -132,6 +132,23 @@ class Page_Controller extends Controller {
 		// Note: you should use SS template require tags inside your templates 
 		// instead of putting Requirements calls here.  However these are 
 		// included so that our older themes still work
+		Requirements::combine_files(
+	    'main.challenge.js',
+	    array(
+	        'https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js',
+	    	'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js',
+	        'https://cdn.embed.ly/jquery.embedly-3.1.1.min.js',
+	        'https://cdn.firebase.com/js/client/1.0.21/firebase.js',
+	        'https://cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min.js',
+	        'http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js',
+	        'themes/feedo/js/jquery.backstretch.min.js',
+	        'themes/feedo/js/ripples.min.js',
+	        'themes/feedo/js/material.min.js',
+	        'http://fezvrasta.github.io/snackbarjs/dist/snackbar.min.js',
+	        'http://cdnjs.cloudflare.com/ajax/libs/noUiSlider/6.2.0/jquery.nouislider.min.js',
+	        'themes/feedo/js/main.js'
+	    )
+		);
 	}
 
 	public function projects(){

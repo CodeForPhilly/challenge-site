@@ -72,24 +72,7 @@ FOOTER
     <!--BACKSTRETCH-->
     <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
 
-<%-- Please move: Theme javascript (below) should be moved to mysite/code/page.php  --%>
-<!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <%-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> --%>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js"></script>
-  	<script src="https://cdn.embed.ly/jquery.embedly-3.1.1.min.js" type="text/javascript"></script>
-  	<script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
-	<script src="https://cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="$ThemeDir/js/jquery.backstretch.min.js"></script>
-    <script src="$ThemeDir/js/ripples.min.js"></script>
-    <script src="$ThemeDir/js/material.min.js"></script>
-    <script src="//fezvrasta.github.io/snackbarjs/dist/snackbar.min.js"></script>
-
-	<script src="//cdnjs.cloudflare.com/ajax/libs/noUiSlider/6.2.0/jquery.nouislider.min.js"></script>
-    <script src="$ThemeDir/js/main.js"></script>
+<%-- See mysite/code/page.php For all included javascript files --%>
 
 </body>
 </html>

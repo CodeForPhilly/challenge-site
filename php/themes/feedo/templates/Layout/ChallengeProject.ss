@@ -16,6 +16,7 @@
 	    
 	</ul>
 <div ng-controller="ProjectsCtrl" id="myTabContent" class="tab-content">
+	<% if AddProject %>
     <div class="tab-pane fade active in" id="add">
         <p>Enter a civic project below.
         </p>
@@ -59,6 +60,7 @@
 				</form>
 		</div>
     </div>
+    <% end_if %>
 
     <div class="tab-pane fade" id="chat">
        <h2>Chat about this.</h2>
