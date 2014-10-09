@@ -121,6 +121,10 @@
 				                    </label>
 				                </div>
 				                <% end_loop %>
+				                <p>Don't see your project? <a href="c/$PageID/p/add">
+           	<i class="icon-material-add-box"></i> 
+           	Add another project to the list
+           </a>
 				            </div>
 				        </div>
 				        <div class="form-group">
