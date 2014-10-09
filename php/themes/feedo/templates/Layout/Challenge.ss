@@ -14,8 +14,10 @@
 </ul>
 <div ng-controller="ProjectsCtrl" id="myTabContent" class="tab-content">
     <div class="tab-pane fade active in" id="projects">
-        <p>Below are a list of projects you available for you to contribute to.</p>
-        <p>Don't see the project you want? Feel free to <a data-toggle="modal" data-target="#addProject" href="javascript:void(0)"><i class="icon-material-add-box"></i> Add another project to the list</a></p>
+        <p>Below are a list of projects you available for you to contribute to.<br>
+           Don't see the project you want? Feel free to <a data-toggle="modal" data-target="#addProject" href="javascript:void(0)"><i class="icon-material-add-box"></i> Add another project to the list</a></p>
+
+        <h5>The Projects</h5>
         <div class="list-group">
 		    <div ng-repeat="project in projects" class="list-group-item">
 		    	<div class="row-action-primary">

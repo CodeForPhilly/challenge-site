@@ -18,7 +18,7 @@ class Page extends DataObject {
 class Project_Controller extends Controller{
 
 	private static $allowed_actions = array (
-		'challenges','projects'
+		'challenges','projects',"icons"
 	);
 	 private static $url_handlers = array(
     );
@@ -62,6 +62,31 @@ class Project_Controller extends Controller{
 			}
 		}
 	}
+
+	public  function icons($arguments){
+		$params = $arguments->params();
+		$vars = $arguments->requestVars();
+		// var_dump($params);
+		if(!array_key_exists('value', $vars)){
+			print_r('Missing project value!'.PHP_EOL);exit;
+		}else{
+			$value = $vars['value'];
+		}
+		if($arguments->param('OtherID') != NULL){
+			$action = $arguments->param('ID');
+			$name = $arguments->param('OtherID');
+			$name = $this->normalize($name);
+			$fire = new Firebase('https://challengepost.firebaseio.com/','FjQ5I3J8gkpMNeNqvmcSBtglq7qQnSc0wvjSgPgz');
+			if($action == 'add'){
+				//Add a project
+				$d = $fire->get('_icons/'.$name);
+				// Set project info
+				$fire->set('_icons/'.$name,$value);
+				print_r('New Project added to '.$action.' :'.$name.PHP_EOL);
+				//return $this->render();
+			}
+		}
+	}
 }
 class Page_Controller extends Controller {
 
@@ -84,7 +109,7 @@ class Page_Controller extends Controller {
 		'challenges'
 	);
 	 private static $url_handlers = array(
-	 	'$ID!' => 'challenges'
+	 	'$ID!/$ChallengeAction' => 'challenges'
     );
 	public function test(){
 		// $f = Folder::get()->filter(array('Title'=>'backgrounds'))->First();
@@ -130,6 +155,7 @@ class Page_Controller extends Controller {
 				$this->Title = $data->title;
 				$this->Tag = $data->tag;
 				$this->Description = $data->description;
+
 				return $this->renderWith(array('Challenge','Page'));
 			}else{
 				// Challenge not found. Inform user
