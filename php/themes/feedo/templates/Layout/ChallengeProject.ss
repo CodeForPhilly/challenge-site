@@ -98,7 +98,7 @@
 			        </div>
 			        <div class="list-group-separator"></div>
 		        </div>
-		        <% end_with %>
+		        <% end_loop %>
 	    	</div>
 	    </div>
     </div>
