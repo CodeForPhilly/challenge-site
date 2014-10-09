@@ -14,6 +14,7 @@
 	    <li><a href="#chat" data-toggle="tab">Chat about this</a></li>
 	    
 	</ul>
+	<h5>The Projects</h5>
 <div ng-controller="ProjectsCtrl" id="myTabContent" class="tab-content">
 	<% if AddProject %>
     <div class="tab-pane fade active in" id="add">

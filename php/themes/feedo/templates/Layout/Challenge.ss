@@ -81,7 +81,7 @@
 				        <div class="form-group">
 				            <label for="inputTitle" class="col-lg-2 control-label">Title</label>
 				            <div class="col-lg-10">
-				                <input type="text" pattern="[a-zA-Z0-9\\s]+" ng-model="title" class="form-control" id="inputTitle" placeholder="Project Title">
+				                <input type="text" pattern="[a-zA-Z0-9\\s]+" ng-model="title" class="form-control" id="inputTitle" placeholder="Title your Response">
 				            </div>
 				        </div>
 				        <div class="form-group">
@@ -93,15 +93,15 @@
 				        <div class="form-group">
 				            <label for="code" class="col-lg-2 control-label">Code</label>
 				            <div class="col-lg-10">
-				                <textarea ng-model="code" class="form-control" rows="3" id="code"></textarea>
+				                <textarea ng-model="code" class="form-control" rows="4" id="code"></textarea>
 				                <span class="help-block">Paste your code here if you'd like</span>
 				            </div>
 				        </div>
 				        <div class="form-group">
-				            <label for="issues" class="col-lg-2 control-label">List of Issues</label>
+				            <label for="description" class="col-lg-2 control-label">Description</label>
 				            <div class="col-lg-10">
-				                <textarea ng-model="issues" class="form-control" rows="3" id="issues"></textarea>
-				                <span class="help-block">List any issues you would like challengers to help fix.</span>
+				                <textarea ng-model="description" class="form-control" rows="3" id="description"></textarea>
+				                <span class="help-block">Describe what your code does or fixes.</span>
 				            </div>
 				        </div>
 				        <div class="form-group">
