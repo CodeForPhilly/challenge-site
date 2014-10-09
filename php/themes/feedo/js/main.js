@@ -134,11 +134,13 @@ app.controller("ResponseCtrl", ["$scope","$firebase", "projectList","icons",
 		var ref = $firebase(fb).$asArray();
 		$scope.projects = projectList;
 		$scope.icons = icons;
+		$scope.name = "Anonymous";
 		$scope.add = function(){
 			//normalize title
 			var id = $scope.title.toLowerCase();
 			id = id.trim().replace(" ","-");
 			var save = ref.$add({
+				name: $scope.name,
 				title: $scope.title,
 				description: $scope.description,
 				code: $scope.code,

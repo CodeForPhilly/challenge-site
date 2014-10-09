@@ -79,6 +79,12 @@
 				    <fieldset>
 				        <legend>Response to Challenge</legend>
 				        <div class="form-group">
+				            <label for="inputName" class="col-lg-2 control-label">What are you called?</label>
+				            <div class="col-lg-10">
+				                <input type="text" pattern="[a-zA-Z0-9\\s]+" ng-model="name" class="form-control" id="inputName" value="Anonymous" placeholder="Anonymous">
+				            </div>
+				        </div>
+				        <div class="form-group">
 				            <label for="inputTitle" class="col-lg-2 control-label">Title</label>
 				            <div class="col-lg-10">
 				                <input type="text" pattern="[a-zA-Z0-9\\s]+" ng-model="title" class="form-control" id="inputTitle" placeholder="Title your Response">
