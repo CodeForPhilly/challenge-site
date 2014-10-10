@@ -1,10 +1,8 @@
 ## Overview
 
-Base project folder for a SilverStripe ([http://silverstripe.org](http://silverstripe.org)) installation. Requires additional modules to function:
+Base project folder for Code for Philly Challenge Post ([http://silverstripe.org](http://silverstripe.org)) installation. Requires additional modules to function:
 
  * [`framework`](http://github.com/silverstripe/silverstripe-framework): Module including the base framework
- * [`cms`](http://github.com/silverstripe/silverstripe-cms): Module including a Content Management System
- * `themes/simple` (optional)
 
 ## Installation ##
 
@@ -17,10 +15,6 @@ Bugs are tracked on github.com ([framework issues](https://github.com/silverstri
 [cms issues](https://github.com/silverstripe/silverstripe-cms/issues)). 
 Please read our [issue reporting guidelines](http://doc.silverstripe.org/framework/en/misc/contributing/issues).
 
-## Development and Contribution ##
-
-If you would like to make changes to the SilverStripe core codebase, we have an extensive [guide to contributing code](http://doc.silverstripe.org/framework/en/misc/contributing/code).
-
 ## Links ##
 
  * [Changelogs](http://doc.silverstripe.org/framework/en/changelogs/)
@@ -32,7 +26,7 @@ If you would like to make changes to the SilverStripe core codebase, we have an 
 
 ## License ##
 
-	Copyright (c) 2007-2013, SilverStripe Limited - www.silverstripe.com
+	Copyright (c) 2014, melle.io - Code for Philly
 	All rights reserved.
 
 	Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
